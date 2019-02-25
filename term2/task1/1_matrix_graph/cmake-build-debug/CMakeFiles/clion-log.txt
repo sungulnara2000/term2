@@ -1,0 +1,4 @@
+/opt/clion-2018.2.3/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/gulnara/Документы/programming/term2/task1/1_matrix_graph
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/gulnara/Документы/programming/term2/task1/1_matrix_graph/cmake-build-debug

@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/shortest_paths.dir/main.cpp.o CMakeFiles/shortest_paths.dir/SetGraph.cpp.o CMakeFiles/shortest_paths.dir/bfs.cpp.o  -o shortest_paths 
