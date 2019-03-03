@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/strongly_connected.dir/main.cpp.o CMakeFiles/strongly_connected.dir/findSCC.cpp.o CMakeFiles/strongly_connected.dir/list_graph.cpp.o CMakeFiles/strongly_connected.dir/getTranspose.cpp.o  -o strongly_connected 

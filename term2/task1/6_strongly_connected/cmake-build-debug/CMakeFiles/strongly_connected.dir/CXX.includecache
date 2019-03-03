@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/gulnara/Документы/programming/term2/task1/strongly_connected/graph.h
+vector
+-
+
+/home/gulnara/Документы/programming/term2/task1/strongly_connected/list_graph.cpp
+list_graph.h
+/home/gulnara/Документы/programming/term2/task1/strongly_connected/list_graph.h
+
+/home/gulnara/Документы/programming/term2/task1/strongly_connected/list_graph.h
+graph.h
+/home/gulnara/Документы/programming/term2/task1/strongly_connected/graph.h
+vector
+-
+
