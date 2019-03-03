@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/gulnara/Документы/programming/git_repo/term2/task1/1_make_graph/dfs.h
+graph.h
+/home/gulnara/Документы/programming/git_repo/term2/task1/1_make_graph/graph.h
+
+/home/gulnara/Документы/programming/git_repo/term2/task1/1_make_graph/graph.h
+vector
+-
+
+/home/gulnara/Документы/programming/git_repo/term2/task1/1_make_graph/list_graph.cpp
+list_graph.h
+/home/gulnara/Документы/programming/git_repo/term2/task1/1_make_graph/list_graph.h
+
+/home/gulnara/Документы/programming/git_repo/term2/task1/1_make_graph/list_graph.h
+graph.h
+/home/gulnara/Документы/programming/git_repo/term2/task1/1_make_graph/graph.h
+vector
+-
+
+/home/gulnara/Документы/programming/git_repo/term2/task1/1_make_graph/main.cpp
+list_graph.h
+/home/gulnara/Документы/programming/git_repo/term2/task1/1_make_graph/list_graph.h
+dfs.h
+/home/gulnara/Документы/programming/git_repo/term2/task1/1_make_graph/dfs.h
+iostream
+-
+
