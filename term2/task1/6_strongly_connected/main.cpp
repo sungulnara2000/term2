@@ -16,5 +16,20 @@ int main() {
     graph.AddEdge(2, 3);
 
     graph.FindSCC();
+    cout << graph.CountAddEdges();
+
+//    for (int i = 0; i < graph.components.size(); ++i) {
+//        cout << i << ": ";
+//        for (int j : graph.components[i]) {
+//            cout << j << " ";
+//        }
+//        cout << "\n";
+//    }
+//
+//    for (int i : graph.colors) {
+//        cout << i << ' ';
+//    }
+
+
     return 0;
 }

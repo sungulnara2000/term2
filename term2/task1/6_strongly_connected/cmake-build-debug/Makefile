@@ -48,10 +48,10 @@ RM = /opt/clion-2018.2.3/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gulnara/Документы/programming/term2/task1/strongly_connected
+CMAKE_SOURCE_DIR = /home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gulnara/Документы/programming/term2/task1/strongly_connected/cmake-build-debug
+CMAKE_BINARY_DIR = /home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gulnara/Документы/programming/term2/task1/strongly_connected/cmake-build-debug/CMakeFiles /home/gulnara/Документы/programming/term2/task1/strongly_connected/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug/CMakeFiles /home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gulnara/Документы/programming/term2/task1/strongly_connected/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -122,6 +122,33 @@ strongly_connected: cmake_check_build_system
 strongly_connected/fast:
 	$(MAKE) -f CMakeFiles/strongly_connected.dir/build.make CMakeFiles/strongly_connected.dir/build
 .PHONY : strongly_connected/fast
+
+CountAddEdges.o: CountAddEdges.cpp.o
+
+.PHONY : CountAddEdges.o
+
+# target to build an object file
+CountAddEdges.cpp.o:
+	$(MAKE) -f CMakeFiles/strongly_connected.dir/build.make CMakeFiles/strongly_connected.dir/CountAddEdges.cpp.o
+.PHONY : CountAddEdges.cpp.o
+
+CountAddEdges.i: CountAddEdges.cpp.i
+
+.PHONY : CountAddEdges.i
+
+# target to preprocess a source file
+CountAddEdges.cpp.i:
+	$(MAKE) -f CMakeFiles/strongly_connected.dir/build.make CMakeFiles/strongly_connected.dir/CountAddEdges.cpp.i
+.PHONY : CountAddEdges.cpp.i
+
+CountAddEdges.s: CountAddEdges.cpp.s
+
+.PHONY : CountAddEdges.s
+
+# target to generate assembly for a file
+CountAddEdges.cpp.s:
+	$(MAKE) -f CMakeFiles/strongly_connected.dir/build.make CMakeFiles/strongly_connected.dir/CountAddEdges.cpp.s
+.PHONY : CountAddEdges.cpp.s
 
 findSCC.o: findSCC.cpp.o
 
@@ -240,6 +267,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... strongly_connected"
+	@echo "... CountAddEdges.o"
+	@echo "... CountAddEdges.i"
+	@echo "... CountAddEdges.s"
 	@echo "... findSCC.o"
 	@echo "... findSCC.i"
 	@echo "... findSCC.s"

@@ -17,16 +17,19 @@ void CListGraph::FindSCC() {
     }
 
     CListGraph transposed = GetTranspose();
+    int cur_color = 0;
 
     visited.assign(VerticesCount(), false);
     for (int i = 0; i < VerticesCount(); ++i) {
         int vertex = order[order.size()-1-i];
         if (!visited[vertex]) {
             TransposeDFS(vertex, visited, component, transposed);
-            for (int i : component) {
-                std::cout << i << " ";
+            components.push_back(component);
+
+            for (int j : component) {
+                colors[j] = cur_color;
             }
-            std::cout << '\n';
+            cur_color++;
             component.clear();
         }
     }

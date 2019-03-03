@@ -1,6 +1,6 @@
 #include "list_graph.h"
 
-CListGraph::CListGraph(int vertexCount) : adjacencyList(vertexCount) {
+CListGraph::CListGraph(int vertexCount) : adjacencyList(vertexCount), colors(vertexCount) {
 }
 
 void CListGraph::AddEdge(int from, int to) {
