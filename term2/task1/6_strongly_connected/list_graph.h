@@ -17,9 +17,6 @@ public:
 
     void FindSCC();
     int CountAddEdges();
-    vector<vector<int>> components; // хранит как элементы все компоненты сильной связности
-    vector<int> colors; // colors[i] - цвет i-ой вершины
-
 
 private:
     CListGraph GetTranspose();
@@ -27,4 +24,6 @@ private:
     void TransposeDFS(int vertex, vector<bool>& visited, vector<int>& component, CListGraph transposed);
 
     vector<vector<int>> adjacencyList;
+    vector<int> colors; // colors[i] - цвет i-ой вершины
+    vector<vector<int>> components; // хранит все компоненты сильной связности
 };

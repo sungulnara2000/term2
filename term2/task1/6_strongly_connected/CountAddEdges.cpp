@@ -6,6 +6,8 @@
 #include <algorithm>
 
 int CListGraph::CountAddEdges() {
+    FindSCC();
+
     vector<int> SCCsInDegree(components.size(), 0);
     vector<int> SCCsOutDegree(components.size(), 0);
     for (int i = 0; i < adjacencyList.size(); ++i) {

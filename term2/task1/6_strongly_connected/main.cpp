@@ -6,17 +6,28 @@
 using namespace std;
 
 int main() {
-    CListGraph graph(4);
-    graph.AddEdge(0, 1);
-    graph.AddEdge(1, 2);
-    graph.AddEdge(2, 0);
-    graph.AddEdge(0, 2);
-    graph.AddEdge(2, 1);
-    graph.AddEdge(1, 0);
-    graph.AddEdge(2, 3);
+    int vertexCount;
+    int edgesCount;
+    std::cin >> vertexCount >> edgesCount;
+    CListGraph graph(vertexCount);
+    for (int i = 0; i < edgesCount; i++) {
+        int from;
+        int to;
+        cin >> from >> to;
+        graph.AddEdge(from - 1, to - 1);
+    }
 
-    graph.FindSCC();
     cout << graph.CountAddEdges();
+    //return 0;
+
+//    CListGraph graph(5);
+//    graph.AddEdge(0, 1);
+//    graph.AddEdge(1, 2);
+//    graph.AddEdge(2, 0);
+//    graph.AddEdge(0, 3);
+//    graph.AddEdge(3, 4);
+//
+//    cout << graph.CountAddEdges();
 
 //    for (int i = 0; i < graph.components.size(); ++i) {
 //        cout << i << ": ";

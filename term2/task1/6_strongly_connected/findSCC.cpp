@@ -25,7 +25,6 @@ void CListGraph::FindSCC() {
         if (!visited[vertex]) {
             TransposeDFS(vertex, visited, component, transposed);
             components.push_back(component);
-
             for (int j : component) {
                 colors[j] = cur_color;
             }
