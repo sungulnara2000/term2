@@ -7,6 +7,9 @@
 
 int CListGraph::CountAddEdges() {
     FindSCC();
+    if (components.size() == 1) {
+        return 0;
+    }
 
     vector<int> SCCsInDegree(components.size(), 0);
     vector<int> SCCsOutDegree(components.size(), 0);

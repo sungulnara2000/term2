@@ -6,6 +6,12 @@
 
 #IncludeRegexTransform: 
 
+/home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/CountAddEdges.cpp
+list_graph.h
+/home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/list_graph.h
+algorithm
+-
+
 /home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/graph.h
 vector
 -
@@ -14,11 +20,5 @@ vector
 graph.h
 /home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/graph.h
 vector
--
-
-/home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/main.cpp
-list_graph.h
-/home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/list_graph.h
-iostream
 -
 
