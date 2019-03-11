@@ -1,3 +1,0 @@
-/home/gulnara/Документы/programming/term2/task1/4_bipartite/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/gulnara/Документы/programming/term2/task1/4_bipartite/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/gulnara/Документы/programming/term2/task1/4_bipartite/cmake-build-debug/CMakeFiles/4_bipartite.dir

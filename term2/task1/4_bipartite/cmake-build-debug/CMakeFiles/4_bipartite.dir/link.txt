@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/4_bipartite.dir/main.cpp.o CMakeFiles/4_bipartite.dir/SetGraph.cpp.o CMakeFiles/4_bipartite.dir/isBipartite.cpp.o  -o 4_bipartite 
