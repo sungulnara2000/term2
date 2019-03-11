@@ -1,4 +1,0 @@
-/opt/clion-2018.2.3/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/gulnara/Документы/programming/term2/task1/2_shortest_cycle
--- Configuring done
--- Generating done
--- Build files have been written to: /home/gulnara/Документы/programming/term2/task1/2_shortest_cycle/cmake-build-debug
