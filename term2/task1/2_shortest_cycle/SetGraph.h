@@ -9,7 +9,6 @@
 #include <unordered_set>
 
 #include "graph.h"
-#include "vertexCycle.h"
 
 using std::vector;
 using std::unordered_set;
@@ -24,10 +23,8 @@ public:
     virtual void GetNextVertices(int vertex, vector<int>& vertices) const;
     virtual void GetPrevVertices(int vertex, vector<int>& vertices) const;
 
-    int shortestCycle();
 
 private:
-    int vertexCycle(int vertex);
 
     vector<unordered_set<int>> arrayOfSets;
     int vertexCount_;

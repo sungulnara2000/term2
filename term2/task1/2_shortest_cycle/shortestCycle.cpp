@@ -3,11 +3,12 @@
 //
 
 #include "SetGraph.h"
+#include "vertexCycle.h"
 
-int SetGraph:: shortestCycle() {
-    int rv = vertexCount_ + 1;
-    for (int i = 0; i < vertexCount_; ++i) {
-        int currentCycle = vertexCycle(i);
+int shortestCycle(const IGraph* graph) {
+    int rv = graph->VerticesCount() + 1;
+    for (int i = 0; i < graph->VerticesCount(); ++i) {
+        int currentCycle = vertexCycle(i, graph);
         if (currentCycle < rv) {
             rv = currentCycle;
         }

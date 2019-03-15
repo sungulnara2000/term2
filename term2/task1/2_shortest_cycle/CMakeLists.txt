@@ -3,4 +3,4 @@ project(2_shortest_cycle)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(2_shortest_cycle main.cpp vertexCycle.cpp vertexCycle.h SetGraph.cpp SetGraph.h graph.h shortestCycle.cpp)
+add_executable(2_shortest_cycle main.cpp vertexCycle.cpp SetGraph.cpp SetGraph.h graph.h shortestCycle.cpp shortestCycle.h vertexCycle.h)

@@ -1,5 +1,6 @@
 #include <iostream>
 #include "SetGraph.h"
+#include "shortestCycle.h"
 
 int main() {
     int vertexCount, edgesCount;
@@ -12,7 +13,7 @@ int main() {
         std::swap(from, to);
         graph.AddEdge(from, to);
     }
-    int rv = graph.shortestCycle();
+    int rv = shortestCycle(&graph);
     std::cout << ( (rv <= graph.VerticesCount()) ? rv : -1);
     return 0;
 }

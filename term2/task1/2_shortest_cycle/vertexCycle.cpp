@@ -3,20 +3,19 @@
 #include <queue>
 
 #include "SetGraph.h"
-#include "vertexCycle.h"
 
 using std::vector;
 using std::cout;
 using std::endl;
 using std::queue;
 
-int SetGraph:: vertexCycle(int vertex) {
+int vertexCycle(int vertex, const IGraph* graph) {
 
-    vector<bool> wasUsed(vertexCount_, false);
+    vector<bool> wasUsed(graph->VerticesCount(), false);
     wasUsed[vertex] = true;
 
-    vector<int> prev(vertexCount_, -1);
-    vector<int> depth(vertexCount_, 0);
+    vector<int> prev(graph->VerticesCount(), -1);
+    vector<int> depth(graph->VerticesCount(), 0);
 
     queue<int> bufferQueue;
     bufferQueue.push(vertex);
@@ -25,7 +24,7 @@ int SetGraph:: vertexCycle(int vertex) {
         int current = bufferQueue.front();
         bufferQueue.pop();
         vector<int> next;
-        GetNextVertices(current, next);
+        graph->GetNextVertices(current, next);
         for (int nextVertex : next) {
             if (!wasUsed[nextVertex]) {
                 bufferQueue.push(nextVertex);
@@ -37,5 +36,5 @@ int SetGraph:: vertexCycle(int vertex) {
             }
         }
     }
-    return vertexCount_ + 1;
+    return graph->VerticesCount() + 1;
 }
