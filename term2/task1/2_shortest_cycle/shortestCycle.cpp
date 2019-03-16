@@ -8,10 +8,7 @@
 int shortestCycle(const IGraph* graph) {
     int rv = graph->VerticesCount() + 1;
     for (int i = 0; i < graph->VerticesCount(); ++i) {
-        int currentCycle = vertexCycle(i, graph);
-        if (currentCycle < rv) {
-            rv = currentCycle;
-        }
+        rv = std::min(vertexCycle(i, graph), rv);
     }
     return rv;
 }
