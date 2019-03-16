@@ -1,4 +1,9 @@
-#pragma once
+//
+// Created by gulnara on 22.02.19.
+//
+
+#ifndef INC_1_MAKE_GRAPH_LISTGRAPH_H
+#define INC_1_MAKE_GRAPH_LISTGRAPH_H
 
 #include "graph.h"
 
@@ -6,9 +11,9 @@
 
 using std::vector;
 
-class CListGraph : public IGraph {
+class ListGraph : public IGraph {
 public:
-    CListGraph(int vertexCount);
+    ListGraph(int vertexCount);
 
     virtual void AddEdge(int from, int to);
     virtual int VerticesCount() const;
@@ -18,3 +23,6 @@ public:
 private:
     vector<vector<int>> adjacencyList;
 };
+
+
+#endif //INC_1_MAKE_GRAPH_LISTGRAPH_H

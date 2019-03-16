@@ -8,7 +8,7 @@
 using namespace std;
 
 int main() {
-    CListGraph graph(10);
+    ListGraph graph(10);
     graph.AddEdge(1, 2);
     graph.AddEdge(1, 3);
     graph.AddEdge(0, 1);
