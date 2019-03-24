@@ -2,7 +2,7 @@
 // Created by gulnara on 22.02.19.
 //
 
-#include "list_graph.h"
+#include "ListGraph.h"
 
 ListGraph::ListGraph(int vertexCount) : adjacencyList(vertexCount) {
 }
