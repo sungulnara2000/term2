@@ -34,22 +34,20 @@ int dijkstra(IGraph const &graph, int from, int to) {
     vector<int> dist(graph.VerticesCount(), INT_MAX);
     dist[from] = 0;
 
-    set<int> SPT;
-    while(SPT.size() < graph.VerticesCount()) {
+    vector<bool> SPT(graph.VerticesCount(), false);
+    for (int j = 0; j < graph.VerticesCount() - 1; ++j) {
 //        auto min_elem = min_element(dist.begin(), dist.end()), [SPT](int a, int b) { return SPT.find(a)==SPT.end() && SPT.find(b)==SPT.end() && a < b; }) ;
-//        int min_dist_vertex = min_element(dist.begin(), dist.end()), [SPT](int a, int b) { return SPT.find(a)==SPT.end() && SPT.find(b)==SPT.end() && a < b; }) ;
+
         int min_dist_vertex = MinDistVertex(dist, SPT);
-        SPT.insert(min_dist_vertex);
+        SPT[min_dist_vertex] = true;
         vector<pair<int, int>> adjacents;
         graph.GetAdjacentVertices(min_dist_vertex, adjacents);
         for (auto i: adjacents) {
-            if (dist[i.first] > dist[min_dist_vertex] + i.second) {
+            if (!SPT[i.first] && dist[i.first] > dist[min_dist_vertex] + i.second) {
                 dist[i.first] = dist[min_dist_vertex] + i.second;
             }
         }
     }
-//    for (int i = 0; i < graph.VerticesCount(); ++i) {
-//        cout << i << " " << dist[i] << endl;
-//    }
-    return ((dist[to] != INT_MAX) ? (static_cast<int>(dist[to])) : (-1));
+
+    return dist[to];
 }
