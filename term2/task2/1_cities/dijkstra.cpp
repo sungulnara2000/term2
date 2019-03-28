@@ -18,11 +18,11 @@ using std::cout;
 using std::endl;
 
 
-int MinDistVertex(vector<int>& dist, set<int>& SPT) {
+int MinDistVertex(vector<int>& dist, vector<bool>& SPT) {
     int min = INT_MAX;
     int min_index;
     for (int i = 0; i < dist.size(); ++i) {
-        if (SPT.find(i) == SPT.end() && dist[i] <= min) {
+        if (SPT[i] == false && dist[i] <= min) {
             min = dist[i];
             min_index = i;
         }
