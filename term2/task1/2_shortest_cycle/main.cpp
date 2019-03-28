@@ -1,18 +1,16 @@
 #include <iostream>
 #include "SetGraph.h"
-#include "shortestCycle.h"
 #include <vector>
 #include <iostream>
 #include <queue>
 
-#include "SetGraph.h"
 
 using std::vector;
 using std::cout;
 using std::endl;
 using std::queue;
 
-int vertexCycle(int vertex, const IGraph* graph) {
+int findMinCycleFromVertex(int vertex, const IGraph* graph) {
 
     vector<bool> wasUsed(graph->VerticesCount(), false);
     wasUsed[vertex] = true;
@@ -42,12 +40,15 @@ int vertexCycle(int vertex, const IGraph* graph) {
     return graph->VerticesCount() + 1;
 }
 
-int shortestCycle(const IGraph* graph) {
-    int rv = graph->VerticesCount() + 1;
+bool shortestCycle(const IGraph* graph, int& rv) {
+    rv = graph->VerticesCount() + 1;
     for (int i = 0; i < graph->VerticesCount(); ++i) {
-        rv = std::min(vertexCycle(i, graph), rv);
+        rv = std::min(findMinCycleFromVertex(i, graph), rv);
     }
-    return rv;
+    if (rv == graph->VerticesCount() + 1) {
+        return false;
+    }
+    return true;
 }
 
 int main() {
@@ -58,10 +59,9 @@ int main() {
         int from, to;
         std::cin >> from >> to;
         graph.AddEdge(from, to);
-        std::swap(from, to);
-        graph.AddEdge(from, to);
+        graph.AddEdge(to, from);
     }
-    int rv = shortestCycle(&graph);
-    std::cout << ( (rv <= graph.VerticesCount()) ? rv : -1);
+    int rv;
+    std::cout << ( shortestCycle(&graph, rv) ? rv : -1);
     return 0;
 }
