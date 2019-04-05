@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/gulnara/Documents/programming/git_repo/term2/task2/8_puzzle/State.h
+vector
+-
+queue
+-
+set
+-
+
+/home/gulnara/Documents/programming/git_repo/term2/task2/8_puzzle/main.cpp
+fstream
+-
+State.h
+/home/gulnara/Documents/programming/git_repo/term2/task2/8_puzzle/State.h
+
