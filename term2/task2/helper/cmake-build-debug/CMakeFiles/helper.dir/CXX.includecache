@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/gulnara/Documents/programming/git_repo/term2/task2/helper/countAddEdges.cpp
+list_graph.h
+/home/gulnara/Documents/programming/git_repo/term2/task2/helper/list_graph.h
+stack
+-
+iostream
+-
+
+/home/gulnara/Documents/programming/git_repo/term2/task2/helper/graph.h
+vector
+-
+
+/home/gulnara/Documents/programming/git_repo/term2/task2/helper/list_graph.h
+graph.h
+/home/gulnara/Documents/programming/git_repo/term2/task2/helper/graph.h
+vector
+-
+

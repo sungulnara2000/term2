@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/15_puzzle_any_solution.dir/main.cpp.o  -o 15_puzzle_any_solution 

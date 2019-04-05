@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected/SCC.cpp
+list_graph.h
+/home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected/list_graph.h
+stack
+-
+iostream
+-
+
+/home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected/graph.h
+vector
+-
+
+/home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected/list_graph.cpp
+list_graph.h
+/home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected/list_graph.h
+
+/home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected/list_graph.h
+graph.h
+/home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected/graph.h
+vector
+-
+
+/home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected/main.cpp
+list_graph.h
+/home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected/list_graph.h
+iostream
+-
+

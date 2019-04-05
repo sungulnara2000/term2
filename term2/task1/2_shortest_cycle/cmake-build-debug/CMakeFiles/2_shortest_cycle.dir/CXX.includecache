@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/gulnara/Documents/programming/git_repo/term2/task1/2_shortest_cycle/SetGraph.h
+vector
+-
+unordered_set
+-
+graph.h
+/home/gulnara/Documents/programming/git_repo/term2/task1/2_shortest_cycle/graph.h
+
+/home/gulnara/Documents/programming/git_repo/term2/task1/2_shortest_cycle/graph.h
+vector
+-
+
+/home/gulnara/Documents/programming/git_repo/term2/task1/2_shortest_cycle/main.cpp
+iostream
+-
+SetGraph.h
+/home/gulnara/Documents/programming/git_repo/term2/task1/2_shortest_cycle/SetGraph.h
+vector
+-
+iostream
+-
+queue
+-
+

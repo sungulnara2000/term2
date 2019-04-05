@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/gulnara/Documents/programming/git_repo/term2/task2/1_cities/ListGraph.cpp
+ListGraph.h
+/home/gulnara/Documents/programming/git_repo/term2/task2/1_cities/ListGraph.h
+
+/home/gulnara/Documents/programming/git_repo/term2/task2/1_cities/ListGraph.h
+graph.h
+/home/gulnara/Documents/programming/git_repo/term2/task2/1_cities/graph.h
+vector
+-
+
+/home/gulnara/Documents/programming/git_repo/term2/task2/1_cities/dijkstra.cpp
+graph.h
+/home/gulnara/Documents/programming/git_repo/term2/task2/1_cities/graph.h
+vector
+-
+limits.h
+-
+set
+-
+algorithm
+-
+iostream
+-
+
+/home/gulnara/Documents/programming/git_repo/term2/task2/1_cities/graph.h
+vector
+-
+
+/home/gulnara/Documents/programming/git_repo/term2/task2/1_cities/main.cpp
+iostream
+-
+ListGraph.h
+/home/gulnara/Documents/programming/git_repo/term2/task2/1_cities/ListGraph.h
+
