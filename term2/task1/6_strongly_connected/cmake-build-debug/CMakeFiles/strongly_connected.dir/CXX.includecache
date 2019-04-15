@@ -6,19 +6,25 @@
 
 #IncludeRegexTransform: 
 
-/home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/CountAddEdges.cpp
+/home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected/CountAddEdges.cpp
 list_graph.h
-/home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/list_graph.h
+/home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected/list_graph.h
 algorithm
 -
+stack
+-
 
-/home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/graph.h
+/home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected/graph.h
 vector
 -
 
-/home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/list_graph.h
+/home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected/list_graph.cpp
+list_graph.h
+/home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected/list_graph.h
+
+/home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected/list_graph.h
 graph.h
-/home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/graph.h
+/home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected/graph.h
 vector
 -
 

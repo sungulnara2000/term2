@@ -1,8 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/strongly_connected.dir/main.cpp.o"
-  "CMakeFiles/strongly_connected.dir/findSCC.cpp.o"
   "CMakeFiles/strongly_connected.dir/list_graph.cpp.o"
-  "CMakeFiles/strongly_connected.dir/getTranspose.cpp.o"
   "CMakeFiles/strongly_connected.dir/CountAddEdges.cpp.o"
   "strongly_connected.pdb"
   "strongly_connected"

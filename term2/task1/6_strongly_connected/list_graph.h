@@ -15,15 +15,8 @@ public:
     virtual void GetNextVertices(int vertex, vector<int>& vertices) const;
     virtual void GetPrevVertices(int vertex, vector<int>& vertices) const;
 
-    void FindSCC();
-    int CountAddEdges();
+    CListGraph GetTranspose();
 
 private:
-    CListGraph GetTranspose();
-    void DFS(int vertex, vector<bool>& visited, vector<int>& order);
-    void TransposeDFS(int vertex, vector<bool>& visited, vector<int>& component, CListGraph transposed);
-
     vector<vector<int>> adjacencyList;
-    vector<int> colors; // colors[i] - цвет i-ой вершины
-    vector<vector<int>> components; // хранит все компоненты сильной связности
 };

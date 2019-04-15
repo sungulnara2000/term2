@@ -48,10 +48,10 @@ RM = /opt/clion-2018.2.3/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected
+CMAKE_SOURCE_DIR = /home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug
+CMAKE_BINARY_DIR = /home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug/CMakeFiles /home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug/CMakeFiles /home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -150,60 +150,6 @@ CountAddEdges.cpp.s:
 	$(MAKE) -f CMakeFiles/strongly_connected.dir/build.make CMakeFiles/strongly_connected.dir/CountAddEdges.cpp.s
 .PHONY : CountAddEdges.cpp.s
 
-findSCC.o: findSCC.cpp.o
-
-.PHONY : findSCC.o
-
-# target to build an object file
-findSCC.cpp.o:
-	$(MAKE) -f CMakeFiles/strongly_connected.dir/build.make CMakeFiles/strongly_connected.dir/findSCC.cpp.o
-.PHONY : findSCC.cpp.o
-
-findSCC.i: findSCC.cpp.i
-
-.PHONY : findSCC.i
-
-# target to preprocess a source file
-findSCC.cpp.i:
-	$(MAKE) -f CMakeFiles/strongly_connected.dir/build.make CMakeFiles/strongly_connected.dir/findSCC.cpp.i
-.PHONY : findSCC.cpp.i
-
-findSCC.s: findSCC.cpp.s
-
-.PHONY : findSCC.s
-
-# target to generate assembly for a file
-findSCC.cpp.s:
-	$(MAKE) -f CMakeFiles/strongly_connected.dir/build.make CMakeFiles/strongly_connected.dir/findSCC.cpp.s
-.PHONY : findSCC.cpp.s
-
-getTranspose.o: getTranspose.cpp.o
-
-.PHONY : getTranspose.o
-
-# target to build an object file
-getTranspose.cpp.o:
-	$(MAKE) -f CMakeFiles/strongly_connected.dir/build.make CMakeFiles/strongly_connected.dir/getTranspose.cpp.o
-.PHONY : getTranspose.cpp.o
-
-getTranspose.i: getTranspose.cpp.i
-
-.PHONY : getTranspose.i
-
-# target to preprocess a source file
-getTranspose.cpp.i:
-	$(MAKE) -f CMakeFiles/strongly_connected.dir/build.make CMakeFiles/strongly_connected.dir/getTranspose.cpp.i
-.PHONY : getTranspose.cpp.i
-
-getTranspose.s: getTranspose.cpp.s
-
-.PHONY : getTranspose.s
-
-# target to generate assembly for a file
-getTranspose.cpp.s:
-	$(MAKE) -f CMakeFiles/strongly_connected.dir/build.make CMakeFiles/strongly_connected.dir/getTranspose.cpp.s
-.PHONY : getTranspose.cpp.s
-
 list_graph.o: list_graph.cpp.o
 
 .PHONY : list_graph.o
@@ -270,12 +216,6 @@ help:
 	@echo "... CountAddEdges.o"
 	@echo "... CountAddEdges.i"
 	@echo "... CountAddEdges.s"
-	@echo "... findSCC.o"
-	@echo "... findSCC.i"
-	@echo "... findSCC.s"
-	@echo "... getTranspose.o"
-	@echo "... getTranspose.i"
-	@echo "... getTranspose.s"
 	@echo "... list_graph.o"
 	@echo "... list_graph.i"
 	@echo "... list_graph.s"

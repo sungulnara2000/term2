@@ -8,38 +8,38 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug"/>
+				<Option working_dir="/home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug"/>
+				<Option working_dir="/home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug"/>
+				<Option working_dir="/home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="strongly_connected">
-				<Option output="/home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug/strongly_connected" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug"/>
+				<Option output="/home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug/strongly_connected" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -54,15 +54,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug/Makefile&quot;  VERBOSE=1 strongly_connected"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug/Makefile&quot;  VERBOSE=1 strongly_connected"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="strongly_connected/fast">
-				<Option output="/home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug/strongly_connected" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug"/>
+				<Option output="/home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug/strongly_connected" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -77,35 +77,29 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug/Makefile&quot;  VERBOSE=1 strongly_connected/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug/Makefile&quot;  VERBOSE=1 strongly_connected/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/CountAddEdges.cpp">
+		<Unit filename="/home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected/CountAddEdges.cpp">
 			<Option target="strongly_connected"/>
 		</Unit>
-		<Unit filename="/home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/findSCC.cpp">
+		<Unit filename="/home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected/graph.h">
 			<Option target="strongly_connected"/>
 		</Unit>
-		<Unit filename="/home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/getTranspose.cpp">
+		<Unit filename="/home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected/list_graph.cpp">
 			<Option target="strongly_connected"/>
 		</Unit>
-		<Unit filename="/home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/graph.h">
+		<Unit filename="/home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected/list_graph.h">
 			<Option target="strongly_connected"/>
 		</Unit>
-		<Unit filename="/home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/list_graph.cpp">
+		<Unit filename="/home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected/main.cpp">
 			<Option target="strongly_connected"/>
 		</Unit>
-		<Unit filename="/home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/list_graph.h">
-			<Option target="strongly_connected"/>
-		</Unit>
-		<Unit filename="/home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/main.cpp">
-			<Option target="strongly_connected"/>
-		</Unit>
-		<Unit filename="/home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/CMakeLists.txt">
+		<Unit filename="/home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

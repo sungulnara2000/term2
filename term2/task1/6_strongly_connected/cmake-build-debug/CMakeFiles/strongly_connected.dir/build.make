@@ -43,10 +43,10 @@ RM = /opt/clion-2018.2.3/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected
+CMAKE_SOURCE_DIR = /home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug
+CMAKE_BINARY_DIR = /home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/strongly_connected.dir/depend.make
@@ -59,88 +59,58 @@ include CMakeFiles/strongly_connected.dir/flags.make
 
 CMakeFiles/strongly_connected.dir/main.cpp.o: CMakeFiles/strongly_connected.dir/flags.make
 CMakeFiles/strongly_connected.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/strongly_connected.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/strongly_connected.dir/main.cpp.o -c /home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/strongly_connected.dir/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/strongly_connected.dir/main.cpp.o -c /home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected/main.cpp
 
 CMakeFiles/strongly_connected.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/strongly_connected.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/main.cpp > CMakeFiles/strongly_connected.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected/main.cpp > CMakeFiles/strongly_connected.dir/main.cpp.i
 
 CMakeFiles/strongly_connected.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/strongly_connected.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/main.cpp -o CMakeFiles/strongly_connected.dir/main.cpp.s
-
-CMakeFiles/strongly_connected.dir/findSCC.cpp.o: CMakeFiles/strongly_connected.dir/flags.make
-CMakeFiles/strongly_connected.dir/findSCC.cpp.o: ../findSCC.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/strongly_connected.dir/findSCC.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/strongly_connected.dir/findSCC.cpp.o -c /home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/findSCC.cpp
-
-CMakeFiles/strongly_connected.dir/findSCC.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/strongly_connected.dir/findSCC.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/findSCC.cpp > CMakeFiles/strongly_connected.dir/findSCC.cpp.i
-
-CMakeFiles/strongly_connected.dir/findSCC.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/strongly_connected.dir/findSCC.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/findSCC.cpp -o CMakeFiles/strongly_connected.dir/findSCC.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected/main.cpp -o CMakeFiles/strongly_connected.dir/main.cpp.s
 
 CMakeFiles/strongly_connected.dir/list_graph.cpp.o: CMakeFiles/strongly_connected.dir/flags.make
 CMakeFiles/strongly_connected.dir/list_graph.cpp.o: ../list_graph.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/strongly_connected.dir/list_graph.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/strongly_connected.dir/list_graph.cpp.o -c /home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/list_graph.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/strongly_connected.dir/list_graph.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/strongly_connected.dir/list_graph.cpp.o -c /home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected/list_graph.cpp
 
 CMakeFiles/strongly_connected.dir/list_graph.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/strongly_connected.dir/list_graph.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/list_graph.cpp > CMakeFiles/strongly_connected.dir/list_graph.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected/list_graph.cpp > CMakeFiles/strongly_connected.dir/list_graph.cpp.i
 
 CMakeFiles/strongly_connected.dir/list_graph.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/strongly_connected.dir/list_graph.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/list_graph.cpp -o CMakeFiles/strongly_connected.dir/list_graph.cpp.s
-
-CMakeFiles/strongly_connected.dir/getTranspose.cpp.o: CMakeFiles/strongly_connected.dir/flags.make
-CMakeFiles/strongly_connected.dir/getTranspose.cpp.o: ../getTranspose.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/strongly_connected.dir/getTranspose.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/strongly_connected.dir/getTranspose.cpp.o -c /home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/getTranspose.cpp
-
-CMakeFiles/strongly_connected.dir/getTranspose.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/strongly_connected.dir/getTranspose.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/getTranspose.cpp > CMakeFiles/strongly_connected.dir/getTranspose.cpp.i
-
-CMakeFiles/strongly_connected.dir/getTranspose.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/strongly_connected.dir/getTranspose.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/getTranspose.cpp -o CMakeFiles/strongly_connected.dir/getTranspose.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected/list_graph.cpp -o CMakeFiles/strongly_connected.dir/list_graph.cpp.s
 
 CMakeFiles/strongly_connected.dir/CountAddEdges.cpp.o: CMakeFiles/strongly_connected.dir/flags.make
 CMakeFiles/strongly_connected.dir/CountAddEdges.cpp.o: ../CountAddEdges.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/strongly_connected.dir/CountAddEdges.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/strongly_connected.dir/CountAddEdges.cpp.o -c /home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/CountAddEdges.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/strongly_connected.dir/CountAddEdges.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/strongly_connected.dir/CountAddEdges.cpp.o -c /home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected/CountAddEdges.cpp
 
 CMakeFiles/strongly_connected.dir/CountAddEdges.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/strongly_connected.dir/CountAddEdges.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/CountAddEdges.cpp > CMakeFiles/strongly_connected.dir/CountAddEdges.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected/CountAddEdges.cpp > CMakeFiles/strongly_connected.dir/CountAddEdges.cpp.i
 
 CMakeFiles/strongly_connected.dir/CountAddEdges.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/strongly_connected.dir/CountAddEdges.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/CountAddEdges.cpp -o CMakeFiles/strongly_connected.dir/CountAddEdges.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected/CountAddEdges.cpp -o CMakeFiles/strongly_connected.dir/CountAddEdges.cpp.s
 
 # Object files for target strongly_connected
 strongly_connected_OBJECTS = \
 "CMakeFiles/strongly_connected.dir/main.cpp.o" \
-"CMakeFiles/strongly_connected.dir/findSCC.cpp.o" \
 "CMakeFiles/strongly_connected.dir/list_graph.cpp.o" \
-"CMakeFiles/strongly_connected.dir/getTranspose.cpp.o" \
 "CMakeFiles/strongly_connected.dir/CountAddEdges.cpp.o"
 
 # External object files for target strongly_connected
 strongly_connected_EXTERNAL_OBJECTS =
 
 strongly_connected: CMakeFiles/strongly_connected.dir/main.cpp.o
-strongly_connected: CMakeFiles/strongly_connected.dir/findSCC.cpp.o
 strongly_connected: CMakeFiles/strongly_connected.dir/list_graph.cpp.o
-strongly_connected: CMakeFiles/strongly_connected.dir/getTranspose.cpp.o
 strongly_connected: CMakeFiles/strongly_connected.dir/CountAddEdges.cpp.o
 strongly_connected: CMakeFiles/strongly_connected.dir/build.make
 strongly_connected: CMakeFiles/strongly_connected.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable strongly_connected"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable strongly_connected"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/strongly_connected.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -153,6 +123,6 @@ CMakeFiles/strongly_connected.dir/clean:
 .PHONY : CMakeFiles/strongly_connected.dir/clean
 
 CMakeFiles/strongly_connected.dir/depend:
-	cd /home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected /home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected /home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug /home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug /home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug/CMakeFiles/strongly_connected.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected /home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected /home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug /home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug /home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug/CMakeFiles/strongly_connected.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/strongly_connected.dir/depend
 

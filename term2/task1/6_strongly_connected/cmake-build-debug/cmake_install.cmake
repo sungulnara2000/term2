@@ -1,4 +1,4 @@
-# Install script for directory: /home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected
+# Install script for directory: /home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

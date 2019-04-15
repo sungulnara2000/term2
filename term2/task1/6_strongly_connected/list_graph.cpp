@@ -1,6 +1,6 @@
 #include "list_graph.h"
 
-CListGraph::CListGraph(int vertexCount) : adjacencyList(vertexCount), colors(vertexCount) {
+CListGraph::CListGraph(int vertexCount) : adjacencyList(vertexCount) {
 }
 
 void CListGraph::AddEdge(int from, int to) {
@@ -27,28 +27,15 @@ void CListGraph::GetPrevVertices(int vertex, vector<int>& vertices) const {
     }
 }
 
-void CListGraph::DFS(int vertex, vector<bool>& visited, vector<int>& order) {
-    visited[vertex] = true;
-    vector<int> next;
-    GetNextVertices(vertex, next);
-
-    for (int i : next) {
-        if (!visited[i]) {
-            DFS(i, visited, order);
+CListGraph CListGraph::GetTranspose() {
+    CListGraph transposed(VerticesCount());
+    for (int i = 0; i < VerticesCount(); ++i) {
+        vector<int> next;
+        GetNextVertices(i, next);
+        for (int j : next) {
+            transposed.AddEdge(j, i);
         }
     }
-    order.push_back(vertex);
-}
-
-void CListGraph::TransposeDFS(int vertex, vector<bool>& visited, vector<int>& component, CListGraph transposed) {
-    visited[vertex] = true;
-    vector<int> next;
-    transposed.GetNextVertices(vertex, next);
-    component.push_back(vertex);
-    for (int i : next) {
-        if (!visited[i]) {
-            TransposeDFS(i, visited, component, transposed);
-        }
-    }
+    return transposed;
 }
 

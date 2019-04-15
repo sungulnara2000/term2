@@ -4,11 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/CountAddEdges.cpp" "/home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug/CMakeFiles/strongly_connected.dir/CountAddEdges.cpp.o"
-  "/home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/findSCC.cpp" "/home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug/CMakeFiles/strongly_connected.dir/findSCC.cpp.o"
-  "/home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/getTranspose.cpp" "/home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug/CMakeFiles/strongly_connected.dir/getTranspose.cpp.o"
-  "/home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/list_graph.cpp" "/home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug/CMakeFiles/strongly_connected.dir/list_graph.cpp.o"
-  "/home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/main.cpp" "/home/gulnara/Документы/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug/CMakeFiles/strongly_connected.dir/main.cpp.o"
+  "/home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected/CountAddEdges.cpp" "/home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug/CMakeFiles/strongly_connected.dir/CountAddEdges.cpp.o"
+  "/home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected/list_graph.cpp" "/home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug/CMakeFiles/strongly_connected.dir/list_graph.cpp.o"
+  "/home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected/main.cpp" "/home/gulnara/Documents/programming/git_repo/term2/task1/6_strongly_connected/cmake-build-debug/CMakeFiles/strongly_connected.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

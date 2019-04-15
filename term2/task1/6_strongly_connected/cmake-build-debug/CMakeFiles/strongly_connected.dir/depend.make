@@ -5,14 +5,6 @@ CMakeFiles/strongly_connected.dir/CountAddEdges.cpp.o: ../CountAddEdges.cpp
 CMakeFiles/strongly_connected.dir/CountAddEdges.cpp.o: ../graph.h
 CMakeFiles/strongly_connected.dir/CountAddEdges.cpp.o: ../list_graph.h
 
-CMakeFiles/strongly_connected.dir/findSCC.cpp.o: ../findSCC.cpp
-CMakeFiles/strongly_connected.dir/findSCC.cpp.o: ../graph.h
-CMakeFiles/strongly_connected.dir/findSCC.cpp.o: ../list_graph.h
-
-CMakeFiles/strongly_connected.dir/getTranspose.cpp.o: ../getTranspose.cpp
-CMakeFiles/strongly_connected.dir/getTranspose.cpp.o: ../graph.h
-CMakeFiles/strongly_connected.dir/getTranspose.cpp.o: ../list_graph.h
-
 CMakeFiles/strongly_connected.dir/list_graph.cpp.o: ../graph.h
 CMakeFiles/strongly_connected.dir/list_graph.cpp.o: ../list_graph.cpp
 CMakeFiles/strongly_connected.dir/list_graph.cpp.o: ../list_graph.h
