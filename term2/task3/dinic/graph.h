@@ -26,14 +26,12 @@ struct Edge {
                                                                 to(to),
                                                                 capacity(capacity),
                                                                 flow(flow),
-                                                                backID(backID),
-                                                                full(false){}
+                                                                backID(backID){}
     int from;
     int to;
     int capacity;
     int flow;
     int backID; // id of back edge
-    bool full;
 };
 
 class Graph{
@@ -45,7 +43,7 @@ public:
     int getMaxFlow(int source, int dest);
 
 private:
-    int sendFlow(int start, int end, int flow);
+    int findBlockFlow(int start, int end, int flow, vector<int>& used);
     vector<int> level;
     bool BFS(int source, int dest);
     vector<vector<Edge>> adjacencyList;

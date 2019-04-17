@@ -42,26 +42,24 @@ bool Graph::BFS(int source, int dest) {
     return level[dest] > 0;
 }
 
-int Graph::sendFlow(int start, int end, int flow) {
+int Graph::findBlockFlow(int start, int end, int flow, vector<int>& used) {
     if (start == end) {
         return flow;
     }
-    for (int i = 0; i < adjacencyList[start].size(); ++i) {
-        // for (auto i : adjacencyList[start]) {
-        Edge currentEdge = adjacencyList[start][i];
-        if (!currentEdge.full && level[currentEdge.to] == level[start] + 1 && currentEdge.capacity > currentEdge.flow) {
-            int possibleFlow = std::min(flow, currentEdge.capacity - currentEdge.flow);
+    for ( ; used[start] < adjacencyList[start].size(); ++used[start]) {
+        if (level[adjacencyList[start][used[start]].to] == level[start] + 1 && adjacencyList[start][used[start]].capacity > adjacencyList[start][used[start]].flow) {
+            int possibleFlow = std::min(flow, adjacencyList[start][used[start]].capacity - adjacencyList[start][used[start]].flow);
 
-            int pushedFlow = sendFlow(currentEdge.to, end, possibleFlow);
+            int pushedFlow = findBlockFlow(adjacencyList[start][used[start]].to, end, possibleFlow, used);
+            if (pushedFlow > 0) {
+                adjacencyList[start][used[start]].flow += pushedFlow;
+                adjacencyList[adjacencyList[start][used[start]].to][adjacencyList[start][used[start]].backID].flow -= pushedFlow;
 
-            adjacencyList[start][i].flow += pushedFlow;
-            adjacencyList[currentEdge.to][currentEdge.backID].flow -= pushedFlow;
-
-            adjacencyList[start][i].full = true;
-            return pushedFlow;
+                return pushedFlow;
+            }
         }
     }
-
+    return 0;
 }
 
 int Graph::getMaxFlow(int source, int dest) {
@@ -70,7 +68,8 @@ int Graph::getMaxFlow(int source, int dest) {
     }
     int maxFlow = 0;
     while(BFS(source, dest)) {
-        while (int flow = sendFlow(source, dest, INT_MAX)) {
+        vector<int> used(verticesCount() + 1, 0);
+        while (int flow = findBlockFlow(source, dest, INT_MAX, used)) {
             maxFlow += flow;
         }
     }
