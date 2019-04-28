@@ -79,18 +79,19 @@ void TSP::EulerTour(int start, vector<int> &path) {
 }
 
 
-int TSP::makeHamiltonian(vector<int>& path) {
+float TSP::makeHamiltonian(vector<int>& path) {
     vector<bool> visited(map.verticesCount, false);
-    int pathCost = 0;
+    float pathCost = 0;
 
     int root = path.front();
     visited[root] = true;
-    auto cur = path.begin();
-    auto iter = path.begin() + 1;
+
+    vector<int>::iterator cur = path.begin();
+    vector<int>::iterator iter = path.begin() + 1;
 
     while(iter != path.end()){
         if(!visited[*iter]){
-            pathCost += map.weightMatrix[*cur][*iter];
+            pathCost += inputGraph.weightMatrix[*cur][*iter];
             cur = iter;
             visited[*cur] = true;
             iter = cur + 1;
@@ -98,7 +99,7 @@ int TSP::makeHamiltonian(vector<int>& path) {
             iter = path.erase(iter);
         }
     }
-    pathCost += map.weightMatrix[*cur][*iter];
+    pathCost += inputGraph.weightMatrix[*cur][*iter];
     cout << "made it Hamiltonian" << endl;
     return pathCost;
 }
@@ -115,11 +116,11 @@ int TSP::makeHamiltonian(vector<int>& path) {
 void TSP::findWay(vector<int>& way) {
     perfectMatching();
     int bestId = 0;
-    int minLength = std::numeric_limits<int>::max();
+    float minLength = std::numeric_limits<int>::max();
     for (int start = 0; start < map.verticesCount; ++start) {
 //        int length = findBestPath(start, way);
         EulerTour(start, way);
-        int length = makeHamiltonian(way);
+        float length = makeHamiltonian(way);
         minLength = std::min(minLength, length);
         bestId = start;
     }

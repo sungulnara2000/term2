@@ -34,7 +34,7 @@ void unionSets(vector<component>& sets, int a, int b) {
 }
 
 void MST(ListGraph& inputGraph, ListGraph& mst) {
-    long MSTweight = 0;
+    float MSTweight = 0;
     int numSets = inputGraph.verticesCount;
     vector<component> sets(inputGraph.verticesCount);
 
@@ -67,22 +67,11 @@ void MST(ListGraph& inputGraph, ListGraph& mst) {
 
                 if (leader1 != leader2) {
                     MSTweight += safeEdges[i].weight;
+                    mst.addEdge(safeEdges[i].from, safeEdges[i].to, safeEdges[i].weight);
                     unionSets(sets, leader1, leader2);
                     --numSets;
                 }
             }
-        }
-    }
-
-    for (auto i : safeEdges) {
-        bool added = false;
-        for (auto j : mst.adjacencyList[i.from]) {
-            if (j.to == i.to && j.weight == i.weight) {
-                added = true;
-            }
-        }
-        if (!added) {
-            mst.addEdge(i.from, i.to, i.weight);
         }
     }
 }

@@ -12,7 +12,7 @@ public:
     TSP(ListGraph& graph);
     void findWay(vector<int>& bufferForPath);
 
-    int wayCost;
+    float wayCost;
 
 private:
     ListGraph inputGraph;
@@ -22,7 +22,7 @@ private:
     void findOdds(vector<int>& bufferForOdds);
     void perfectMatching();
     void EulerTour(int start, vector<int>& path);
-    int makeHamiltonian(vector<int>& path);
+    float makeHamiltonian(vector<int>& path); // make path hamiltonian and return length of the path
 };
 
 

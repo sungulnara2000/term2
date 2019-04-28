@@ -27,11 +27,11 @@ using std::min;
 
 struct Edge {
     Edge() {}
-    Edge(int from, int to, long weight): from(from), to(to), weight(weight) {}
+    Edge(int from, int to, float weight): from(from), to(to), weight(weight) {}
     ~Edge(){}
     int from;
     int to;
-    long weight;
+    float weight;
 };
 
 
@@ -43,11 +43,11 @@ public:
     ListGraph() {};
     ListGraph(int vertexCount);
 //    ListGraph(const ListGraph& graph);
-    void addEdge(int from, int to, long weight);
+    void addEdge(int from, int to, float weight);
 
     vector<Edge> edgesList;
     vector<vector<Edge>> adjacencyList;
-    vector<vector<int>> weightMatrix;
+    vector<vector<float>> weightMatrix;
     int verticesCount;
 };
 

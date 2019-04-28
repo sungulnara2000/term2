@@ -6,17 +6,17 @@
 // addEdge adds from-to and to-from edges
 
 struct City{
-    int x;
-    int y;
+    float x;
+    float y;
 };
 
-int getDistance(City c1, City c2){
-    int dx = pow((float)(c1.x - c2.x),2);
-    int dy = pow((float)(c1.y - c2.y),2);
-    return floor((float)(sqrt(dx + dy) + .5));
+float getDistance(City c1, City c2){
+    float dx = pow((c1.x - c2.x),2);
+    float dy = pow((c1.y - c2.y),2);
+    return sqrt(dx + dy);
 }
 
-int check(ListGraph graph);
+float check(ListGraph graph);
 
 int main() {
     int n;
@@ -35,11 +35,12 @@ int main() {
     TSP tsp(graph);
     vector<int> way;
     tsp.findWay(way);
-    for (auto i : way){
-        cout << i << " ";
+    for (int i = 0; i < way.size(); ++i){
+        cout << i << ": " << way[i] << endl;
     }
-    cout << endl;
-    cout << tsp.wayCost << endl;
-    cout << check(graph);
+    cout << "algotithm counted way cost: " << tsp.wayCost << endl;
+    float realCost = check(graph);
+    cout << "real way cost:              " << realCost << endl;
+    cout << "approximation is            " << tsp.wayCost/realCost;
     return 0;
 }
