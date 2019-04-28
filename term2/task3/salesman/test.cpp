@@ -18,12 +18,11 @@ void createMap(int n, vector<City>& cities) {
     std::random_device rd;
     std::mt19937 gen(rd());
 
-    int i;
-    float sample;
-    for(i = 0; i < n; ++i) {
+    for(int i = 0; i < n; ++i) {
         std::normal_distribution<float> d(0, 1);
         cities[i].x = d(gen);
         cities[i].y = d(gen);
+        cout << "CITY № " << i << ": " << cities[i].x << " " << cities[i].y << endl;
     }
 }
 
