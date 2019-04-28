@@ -1,6 +1,10 @@
 #include "graph.h"
+#include "TSP.h"
 
-long MSTweight(ListGraph& graph);
+void MST(ListGraph& inputGraph, ListGraph& mst);
+
+// undirected everywhere
+// addEdge adds from-to and to-from edges
 
 int main() {
     int n;
@@ -11,8 +15,13 @@ int main() {
         int from, to;
         long weight;
         cin >> from >> to >> weight;
-        graph.AddEdge(from - 1, to - 1, weight);
+        graph.addEdge(from, to, weight);
     }
-    cout << MSTweight(graph);
+    TSP tsp(graph);
+    vector<int> way;
+    tsp.findWay(way);
+    for (auto i : way){
+        cout << i << " ";
+    }
     return 0;
 }

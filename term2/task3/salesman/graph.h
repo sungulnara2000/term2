@@ -9,8 +9,11 @@
 #include <iostream>
 #include <vector>
 #include <unordered_set>
-#include <climits>
+#include <limits>
+#include <stack>
 
+using std::stack;
+using std::endl;
 using std::vector;
 using std::make_pair;
 using std::pair;
@@ -32,11 +35,15 @@ struct Edge {
 
 class ListGraph{
 public:
+    ListGraph() {};
     ListGraph(int vertexCount);
-    void AddEdge(int from, int to, long weight);
+//    ListGraph(const ListGraph& graph);
+    void addEdge(int from, int to, long weight);
 
     vector<Edge> edgesList;
-    int VerticesCount;
+    vector<vector<Edge>> adjacencyList;
+    vector<vector<int>> weightMatrix;
+    int verticesCount;
 };
 
 

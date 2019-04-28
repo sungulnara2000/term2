@@ -33,28 +33,22 @@ void unionSets(vector<component>& sets, int a, int b) {
     }
 }
 
-long MSTweight(ListGraph& graph) {
+void MST(ListGraph& inputGraph, ListGraph& mst) {
     long MSTweight = 0;
-    int numSets = graph.VerticesCount;
-    vector<component> sets(graph.VerticesCount);
+    int numSets = inputGraph.verticesCount;
+    vector<component> sets(inputGraph.verticesCount);
 
-    for (int i = 0; i < graph.VerticesCount; ++i) {
+    for (int i = 0; i < inputGraph.verticesCount; ++i) {
         sets[i].parent = i;
         sets[i].rank = 0;
     }
-
-
-    vector<Edge> safeEdges(graph.VerticesCount, Edge(0, 0, INT_MAX)); // без конструктора?
-
+    vector<Edge> safeEdges(inputGraph.verticesCount, Edge(0, 0, std::numeric_limits<int>::max()));
 
     while(numSets > 1) {
-//        for (auto i : safeEdges) {
-//            i.weight = INT_MAX;
-//        }
-        for (int i = 0; i < graph.VerticesCount; ++i) {
-            safeEdges[i].weight = INT_MAX;
+        for (int i = 0; i < inputGraph.verticesCount; ++i) {
+            safeEdges[i].weight = std::numeric_limits<int>::max();
         }
-        for (auto i : graph.edgesList) {
+        for (auto i : inputGraph.edgesList) {
             int leader1 = findSet(sets, i.from);
             int leader2 = findSet(sets, i.to);
             if (leader1 != leader2) {
@@ -66,8 +60,8 @@ long MSTweight(ListGraph& graph) {
                 }
             }
         }
-        for (int i = 0; i < graph.VerticesCount; ++i) {
-            if (safeEdges[i].weight != INT_MAX) {
+        for (int i = 0; i < inputGraph.verticesCount; ++i) {
+            if (safeEdges[i].weight != std::numeric_limits<int>::max()) {
                 int leader1 = findSet(sets, safeEdges[i].from);
                 int leader2 = findSet(sets, safeEdges[i].to);
 
@@ -79,5 +73,16 @@ long MSTweight(ListGraph& graph) {
             }
         }
     }
-    return MSTweight;
+
+    for (auto i : safeEdges) {
+        bool added = false;
+        for (auto j : mst.adjacencyList[i.from]) {
+            if (j.to == i.to && j.weight == i.weight) {
+                added = true;
+            }
+        }
+        if (!added) {
+            mst.addEdge(i.from, i.to, i.weight);
+        }
+    }
 }
