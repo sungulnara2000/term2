@@ -11,12 +11,12 @@ TSP::TSP(ListGraph& graph): inputGraph(graph),
                             map(graph.verticesCount),
                             wayCost(0) {
     initMap();
-    cout << "created TSP" << endl;
+//    cout << "created TSP" << endl;
 }
 
 void TSP::initMap() {
     MST(inputGraph, map);
-    cout << "inited map" << endl;
+//    cout << "inited map" << endl;
 }
 
 void TSP::findOdds(vector<int> &bufferForOdds) {
@@ -26,7 +26,7 @@ void TSP::findOdds(vector<int> &bufferForOdds) {
             bufferForOdds.push_back(i);
         }
     }
-    cout << "found odds" << endl;
+//    cout << "found odds" << endl;
 }
 
 void TSP::perfectMatching() {
@@ -46,7 +46,7 @@ void TSP::perfectMatching() {
         odds.erase(odds.begin() + closestId);
         odds.erase(odds.begin());
     }
-    cout << "perfect matching completed" << endl;
+//    cout << "perfect matching completed" << endl;
 }
 
 void TSP::EulerTour(int start, vector<int> &path) {
@@ -75,7 +75,7 @@ void TSP::EulerTour(int start, vector<int> &path) {
         }
     }
     path.push_back(pos);
-    cout << "Euler tour" << endl;
+//    cout << "Euler tour" << endl;
 }
 
 
@@ -100,7 +100,7 @@ float TSP::makeHamiltonian(vector<int>& path) {
         }
     }
     pathCost += inputGraph.weightMatrix[*cur][*iter];
-    cout << "made it Hamiltonian" << endl;
+//    cout << "made it Hamiltonian" << endl;
     return pathCost;
 }
 

@@ -13,6 +13,7 @@
 #include <stack>
 #include <math.h>
 #include <algorithm>
+#include <random>
 
 using std::stack;
 using std::endl;
@@ -34,7 +35,10 @@ struct Edge {
     float weight;
 };
 
-
+struct City{
+    float x;
+    float y;
+};
 
 // non-oriented graph with weights
 
