@@ -5,7 +5,7 @@
 
 using namespace std;
 
-int CountAddEdges(CListGraph& graph);
+#include "StronglyConnected.h"
 
 int main() {
     int vertexCount;
@@ -19,7 +19,8 @@ int main() {
         graph.AddEdge(from - 1, to - 1);
     }
 
-    cout << CountAddEdges(graph);
+    StronglyConnected sc;
+    cout << sc.CountAddEdges(graph);
 
     return 0;
 }

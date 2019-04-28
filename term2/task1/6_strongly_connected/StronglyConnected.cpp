@@ -2,48 +2,39 @@
 // Created by gulnara on 03.03.19.
 //
 
+#include "StronglyConnected.h"
 #include "list_graph.h"
-#include <algorithm>
-#include <stack>
 
-using std::stack;
-
-vector<int> colors; // colors[i] - цвет i-ой вершины
-vector<vector<int>> components; // хранит все компоненты сильной связности
-vector<bool> visited;
-vector<int> order;
-vector<int> component;
-
-void DFS(CListGraph& graph, int vertex) {
+void StronglyConnected::DFS(CListGraph& graph, int vertex, vector<int>& buffer) {
     visited[vertex] = true;
     vector<int> next;
     graph.GetNextVertices(vertex, next);
     for (int i : next) {
         if (!visited[i]) {
-            DFS(graph, i);
+            DFS(graph, i, buffer);
         }
     }
-    order.push_back(vertex);
+    buffer.push_back(vertex);
 }
 
-void TransposeDFS(CListGraph& transposed, int vertex) {
-    visited[vertex] = true;
-    vector<int> next;
-    transposed.GetNextVertices(vertex, next);
-    component.push_back(vertex);
-    for (int i : next) {
-        if (!visited[i]) {
-            TransposeDFS(transposed, i);
-        }
-    }
-}
+//void StronglyConnected::TransposeDFS(CListGraph& transposed, int vertex) {
+//    visited[vertex] = true;
+//    vector<int> next;
+//    transposed.GetNextVertices(vertex, next);
+//    for (int i : next) {
+//        if (!visited[i]) {
+//            TransposeDFS(transposed, i);
+//        }
+//    }
+//    component.push_back(vertex);
+//}
 
-void FindSCC(CListGraph& graph) {
+void StronglyConnected::FindSCC(CListGraph& graph) {
     visited.assign(graph.VerticesCount(), false);
     colors.assign(graph.VerticesCount(), -1);
     for (int i = 0; i < graph.VerticesCount(); ++i) {
         if (!visited[i]) {
-            DFS(graph, i);
+            DFS(graph, i, order);
         }
     }
 
@@ -54,7 +45,7 @@ void FindSCC(CListGraph& graph) {
     for (int i = 0; i < graph.VerticesCount(); ++i) {
         int vertex = order[order.size()-1-i];
         if (!visited[vertex]) {
-            TransposeDFS(transposed, vertex);
+            DFS(transposed, vertex, component);
             components.push_back(component);
             for (int j : component) {
                 colors[j] = cur_color;
@@ -65,7 +56,7 @@ void FindSCC(CListGraph& graph) {
     }
 }
 
-int CountAddEdges(CListGraph& graph) {
+int StronglyConnected::CountAddEdges(CListGraph& graph) {
     FindSCC(graph);
     if (components.size() == 1) {
         return 0;
