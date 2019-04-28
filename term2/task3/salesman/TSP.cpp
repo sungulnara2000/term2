@@ -6,6 +6,14 @@
 
 void MST(ListGraph& inputGraph, ListGraph& mst);
 
+
+TSP::TSP(ListGraph& graph): inputGraph(graph),
+                            map(graph.verticesCount),
+                            wayCost(0) {
+    initMap();
+    cout << "created TSP" << endl;
+}
+
 void TSP::initMap() {
     MST(inputGraph, map);
     cout << "inited map" << endl;
@@ -116,6 +124,6 @@ void TSP::findWay(vector<int>& way) {
         bestId = start;
     }
     EulerTour(bestId, way);
-    makeHamiltonian(way);
+    wayCost = makeHamiltonian(way);
     way.push_back(bestId);
 }

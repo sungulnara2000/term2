@@ -9,11 +9,10 @@
 
 class TSP {
 public:
-    TSP(ListGraph& graph): inputGraph(graph), map(graph.verticesCount) {
-        initMap();
-        cout << "created TSP" << endl;
-    }
+    TSP(ListGraph& graph);
     void findWay(vector<int>& bufferForPath);
+
+    int wayCost;
 
 private:
     ListGraph inputGraph;
@@ -24,7 +23,6 @@ private:
     void perfectMatching();
     void EulerTour(int start, vector<int>& path);
     int makeHamiltonian(vector<int>& path);
-    int findBestPath(int start, vector<int>& path);
 };
 
 

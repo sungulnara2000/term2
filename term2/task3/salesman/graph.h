@@ -11,6 +11,8 @@
 #include <unordered_set>
 #include <limits>
 #include <stack>
+#include <math.h>
+#include <algorithm>
 
 using std::stack;
 using std::endl;
@@ -20,6 +22,8 @@ using std::pair;
 using std::unordered_set;
 using std::cin;
 using std::cout;
+using std::numeric_limits;
+using std::min;
 
 struct Edge {
     Edge() {}
@@ -29,6 +33,7 @@ struct Edge {
     int to;
     long weight;
 };
+
 
 
 // non-oriented graph with weights
