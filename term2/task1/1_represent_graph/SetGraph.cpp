@@ -23,12 +23,14 @@ int SetGraph::VerticesCount() const {
 }
 
 void SetGraph::GetNextVertices(int vertex, vector<int>& vertices) const {
+    vertices.clear();
     for(auto itr = arrayOfSets[vertex].begin(); itr != arrayOfSets[vertex].end(); ++itr) {
         vertices.push_back(*itr);
     }
 }
 
 void SetGraph::GetPrevVertices(int vertex, vector<int>& vertices) const {
+    vertices.clear();
     for (int i = 0; i < vertexCount_; ++i) {
         if (arrayOfSets[i].find(vertex) != arrayOfSets[i].end()) {
             vertices.push_back(i);

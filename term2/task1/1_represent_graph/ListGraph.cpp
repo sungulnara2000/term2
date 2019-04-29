@@ -2,9 +2,16 @@
 // Created by gulnara on 22.02.19.
 //
 
+#include <limits>
 #include "ListGraph.h"
 
 ListGraph::ListGraph(int vertexCount) : adjacencyList(vertexCount) {
+}
+
+ListGraph::ListGraph(IGraph* graph) : adjacencyList(graph->VerticesCount(), vector<int>(0)) {
+    for (int i = 0; i < graph->VerticesCount(); ++i) {
+        graph->GetNextVertices(i, adjacencyList[i]);
+    }
 }
 
 void ListGraph::AddEdge(int from, int to) {

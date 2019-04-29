@@ -29,6 +29,7 @@ int ArcGraph::VerticesCount() const {
 }
 
 void ArcGraph::GetNextVertices(int vertex, vector<int>& vertices) const {
+    vertices.clear();
     for (int i = 0; i < edges.size(); ++i) {
         if (edges[i].first == vertex) {
             vertices.push_back(edges[i].second);
@@ -37,6 +38,7 @@ void ArcGraph::GetNextVertices(int vertex, vector<int>& vertices) const {
 }
 
 void ArcGraph::GetPrevVertices(int vertex, vector<int>& vertices) const {
+    vertices.clear();
     for (int i = 0; i < edges.size(); ++i) {
         if (edges[i].second == vertex) {
             vertices.push_back(edges[i].first);

@@ -14,6 +14,7 @@ using std::vector;
 class ListGraph : public IGraph {
 public:
     ListGraph(int vertexCount);
+    ListGraph(IGraph* graph);
 
     virtual void AddEdge(int from, int to);
     virtual int VerticesCount() const;

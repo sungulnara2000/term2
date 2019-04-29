@@ -30,45 +30,50 @@ void InitGraph(IGraph& graph) {
 }
 
 void test1(){
+    vector<IGraph*> graphs;
     SetGraph set_graph(10);
-    InitGraph(set_graph);
+    graphs.push_back(&set_graph);
 
     ListGraph list_graph(10);
-    InitGraph(list_graph);
+    graphs.push_back(&list_graph);
 
     ArcGraph arc_graph(10);
-    InitGraph(arc_graph);
+    graphs.push_back(&arc_graph);
 
     MatrixGraph matrix_graph(10);
-    InitGraph(matrix_graph);
+    graphs.push_back(&matrix_graph);
 
-    MatrixGraph matrix_graph_copy = MatrixGraph(&list_graph);
-    ArcGraph arc_graph_copy = ArcGraph(&set_graph);
-    ListGraph list_graph_copy = ListGraph(&matrix_graph);
-    SetGraph set_graph_copy = SetGraph(&arc_graph);
+    for (auto i: graphs) {
+        InitGraph(*i);
+    }
 
+    vector<int> first_buffer;
+    vector<int> second_buffer;
+    for (size_t i = 0; i < graphs.size(); ++i) {
+        for (size_t j = i + 1; j < graphs.size(); ++j) {
+            IGraph* firstGraph = graphs[i];
+            IGraph* secondGraph = graphs[j];
 
-    vector<int> matrix_buffer;
-    vector<int> set_buffer;
-    vector<int> list_buffer;
-    vector<int> arc_buffer;
+            firstGraph->GetPrevVertices(5, first_buffer);
+            secondGraph->GetPrevVertices(5, second_buffer);
+            assert(compareVectors(first_buffer, second_buffer));
 
-    vector<int> matrix_copy_buffer;
-    vector<int> set_copy_buffer;
-    vector<int> list_copy_buffer;
-    vector<int> arc_copy_buffer;
+            firstGraph->GetNextVertices(3, first_buffer);
+            secondGraph->GetNextVertices(3, second_buffer);
+            assert(compareVectors(first_buffer, second_buffer));
 
-    matrix_graph.GetNextVertices(5, matrix_buffer);
-    set_graph.GetNextVertices(5, set_buffer);
-    list_graph.GetPrevVertices(8, list_buffer);
-    arc_graph.GetPrevVertices(8, arc_buffer);
-    matrix_graph_copy.GetNextVertices(2, matrix_copy_buffer);
-    set_graph_copy.GetNextVertices(2, set_copy_buffer);
-    list_graph_copy.GetPrevVertices(9, list_copy_buffer);
-    arc_graph_copy.GetPrevVertices(9, arc_copy_buffer);
+            MatrixGraph matrix_graph_copy = MatrixGraph(firstGraph);
+            ArcGraph arc_graph_copy = ArcGraph(firstGraph);
+            ListGraph list_graph_copy = ListGraph(firstGraph);
+            SetGraph set_graph_copy = SetGraph(firstGraph);
 
-    assert(compareVectors(matrix_buffer, set_buffer));
-    assert(compareVectors(list_buffer, arc_buffer));
-    assert(compareVectors(matrix_copy_buffer, set_copy_buffer));
-    assert(compareVectors(list_copy_buffer, arc_copy_buffer));
+            matrix_graph_copy.GetNextVertices(2, first_buffer);
+            set_graph_copy.GetNextVertices(2, second_buffer);
+            assert(compareVectors(first_buffer, second_buffer));
+
+            list_graph_copy.GetPrevVertices(9, first_buffer);
+            arc_graph_copy.GetPrevVertices(9, second_buffer);
+            assert(compareVectors(first_buffer, second_buffer));
+        }
+    }
 }
