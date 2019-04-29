@@ -4,6 +4,17 @@
 
 #include "Solver.h"
 
+int heuristic(const State& state) {
+    int heuristic = 0;
+    // манхэттенское расстояние
+    for (int i = 0; i < 16; ++i) {
+        if (state.get_value(i) != 0) {
+            heuristic += abs(i / 4 - (state.get_value(i) - 1) / 4) + abs(i % 4 - (state.get_value(i) - 1) % 4);
+        }
+    }
+    return heuristic;
+}
+
 bool solvable(State& state) {
     int inversions = 0;
     for (int i = 0; i < 16; ++i) {

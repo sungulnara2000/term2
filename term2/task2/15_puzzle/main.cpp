@@ -14,17 +14,13 @@ int main() {
     State state(combination);
 
     vector<char> moves;
-    if (state.row == 1311768467463790320) {
-        std::cout <<  0;
-    } else {
-        Solver solver;
-        if (solver.solve(state, moves)) {
-            std::cout << moves.size() << '\n';
-            for (auto i: moves) {
-                std::cout << i;
-            }
-        } else {
-            std::cout << -1;
+    Solver solver;
+    if (solver.solve(state, moves)) {
+        std::cout << moves.size() << '\n';
+        for (auto i: moves) {
+            std::cout << i;
         }
+    } else {
+        std::cout << -1;
     }
 }

@@ -7,16 +7,7 @@
 
 #include "State.h"
 
-int heuristic(const State& state) {
-    int heuristic = 0;
-    // манхэттенское расстояние
-    for (int i = 0; i < 16; ++i) {
-        if (state.get_value(i) != 0) {
-            heuristic += abs(i / 4 - (state.get_value(i) - 1) / 4) + abs(i % 4 - (state.get_value(i) - 1) % 4);
-        }
-    }
-    return heuristic;
-}
+int heuristic(const State& state);
 
 struct cmp {
     bool operator()(const State& first, const State& second) {
