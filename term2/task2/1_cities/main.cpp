@@ -4,7 +4,7 @@
 using std::cin;
 using std::cout;
 
-int dijkstra(IGraph const &graph, int from, int to);
+int FindMinPath(IGraph const &graph, int from, int to);
 
 int main() {
     int n;
@@ -17,6 +17,6 @@ int main() {
         graph.AddEdge(from, to, length);
     }
     cin >> n >> m;
-    cout << dijkstra(graph, n, m);
+    cout << FindMinPath(graph, n, m);
     return 0;
 }
