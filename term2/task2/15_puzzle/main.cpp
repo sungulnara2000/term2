@@ -1,5 +1,6 @@
 #include <iostream>
 #include "State.h"
+#include "Solver.h"
 
 
 using std::cin;
