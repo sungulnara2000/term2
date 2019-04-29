@@ -18,8 +18,8 @@ using std::cout;
 using std::endl;
 using std::make_pair;
 
-int dijkstra(IGraph const &graph, int from, int to) {
-    vector<int> dist(graph.VerticesCount(), INT_MAX);
+int FindMinPath(IGraph const &graph, int from, int to) {
+    vector<int> dist(graph.VerticesCount(), std::numeric_limits<size_t>::max());
     dist[from] = 0;
 
     vector<bool> used(graph.VerticesCount(), false);
@@ -33,14 +33,14 @@ int dijkstra(IGraph const &graph, int from, int to) {
         graph.GetAdjacentVertices(min_dist_vertex, adjacents);
         for (auto i: adjacents) {
             if (dist[i.first] > dist[min_dist_vertex] + i.second) {
-                if (dist[i.first] != INT_MAX) {
+                if (dist[i.first] != std::numeric_limits<size_t>::max()) {
                     queue.erase(make_pair(dist[i.first], i.first));
                 }
                 dist[i.first] = dist[min_dist_vertex] + i.second;
-                queue.emplace(make_pair(dist[i.first], i.first));
+                queue.emplace(dist[i.first], i.first);
             }
         }
     }
 
-    return dist[to] != INT_MAX ? dist[to] : -1;
+    return dist[to] != std::numeric_limits<size_t>::max() ? dist[to] : -1;
 }
