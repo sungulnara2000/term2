@@ -2,6 +2,7 @@
 #include <vector>
 #include <unordered_set>
 #include <climits>
+#include <limits>
 
 using std::vector;
 using std::make_pair;
@@ -25,21 +26,31 @@ struct Edge {
 class ListGraph{
 public:
     ListGraph(int vertexCount);
-    void AddEdge(int from, int to, long weight);
+    void addEdge(int from, int to, long weight);
+    Edge getEdge(int i) const;
+    int getEdgesCount() const;
 
+    int verticesCount;
+
+private:
     vector<Edge> edgesList;
-    int VerticesCount;
 };
 
-ListGraph::ListGraph(int vertexCount) : VerticesCount(vertexCount) {}
+ListGraph::ListGraph(int vertexCount) : verticesCount(vertexCount) {}
 
-void ListGraph::AddEdge(int from, int to, long weight) {
+void ListGraph::addEdge(int from, int to, long weight) {
 
     Edge edge(from, to, weight);
     edgesList.push_back(edge);
 }
 
+Edge ListGraph::getEdge(int i) const {
+    return edgesList[i];
+}
 
+int ListGraph::getEdgesCount() const {
+    return edgesList.size();
+}
 
 
 // disjoint-set-union
@@ -54,7 +65,8 @@ int findSet(vector<component>& sets, int v) {
     if (v == sets[v].parent) {
         return v;
     }
-    return sets[v].parent = findSet(sets, sets[v].parent);
+    sets[v].parent = findSet(sets, sets[v].parent);
+    return sets[v].parent;
 }
 
 void unionSets(vector<component>& sets, int a, int b) {
@@ -71,46 +83,43 @@ void unionSets(vector<component>& sets, int a, int b) {
     }
 }
 
-long MSTweight(ListGraph& graph) {
+long CalculateMSTweight(const ListGraph& graph) {
     long MSTweight = 0;
-    int numSets = graph.VerticesCount;
-    vector<component> sets(graph.VerticesCount);
+    int numSets = graph.verticesCount;
+    vector<component> sets(graph.verticesCount);
 
-    for (int i = 0; i < graph.VerticesCount; ++i) {
+    for (int i = 0; i < graph.verticesCount; ++i) {
         sets[i].parent = i;
         sets[i].rank = 0;
     }
 
-
-    vector<Edge> safeEdges(graph.VerticesCount, Edge(0, 0, INT_MAX)); // без конструктора?
+    vector<Edge> safeEdges(graph.verticesCount, Edge(0, 0, std::numeric_limits<int>::max()));
 
 
     while(numSets > 1) {
-//        for (auto i : safeEdges) {
-//            i.weight = INT_MAX;
-//        }
-        for (int i = 0; i < graph.VerticesCount; ++i) {
-            safeEdges[i].weight = INT_MAX;
+        for (int i = 0; i < graph.verticesCount; ++i) {
+            safeEdges[i].weight = std::numeric_limits<int>::max();
         }
-        for (auto i : graph.edgesList) {
-            int leader1 = findSet(sets, i.from);
-            int leader2 = findSet(sets, i.to);
+        for (int j = 0; j < graph.getEdgesCount(); ++j) {
+            Edge edge = graph.getEdge(j);
+            int leader1 = findSet(sets, edge.from);
+            int leader2 = findSet(sets, edge.to);
             if (leader1 != leader2) {
-                if(i.weight < safeEdges[leader1].weight) {
-                    safeEdges[leader1] = i;
+                if(edge.weight < safeEdges[leader1].weight) {
+                    safeEdges[leader1] = edge;
                 }
-                if(i.weight < safeEdges[leader2].weight) {
-                    safeEdges[leader2] = i;
+                if(edge.weight < safeEdges[leader2].weight) {
+                    safeEdges[leader2] = edge;
                 }
             }
         }
-        for (int i = 0; i < graph.VerticesCount; ++i) {
-            if (safeEdges[i].weight != INT_MAX) {
-                int leader1 = findSet(sets, safeEdges[i].from);
-                int leader2 = findSet(sets, safeEdges[i].to);
+        for (int v = 0; v < graph.verticesCount; ++v) {
+            if (safeEdges[v].weight != std::numeric_limits<int>::max()) {
+                int leader1 = findSet(sets, safeEdges[v].from);
+                int leader2 = findSet(sets, safeEdges[v].to);
 
                 if (leader1 != leader2) {
-                    MSTweight += safeEdges[i].weight;
+                    MSTweight += safeEdges[v].weight;
                     unionSets(sets, leader1, leader2);
                     --numSets;
                 }
@@ -123,7 +132,7 @@ long MSTweight(ListGraph& graph) {
 
 
 
-long MSTweight(ListGraph& graph);
+long CalculateMSTweight(const ListGraph& graph);
 
 int main() {
     int n;
@@ -134,8 +143,8 @@ int main() {
         int from, to;
         long weight;
         cin >> from >> to >> weight;
-        graph.AddEdge(from - 1, to - 1, weight);
+        graph.addEdge(from - 1, to - 1, weight);
     }
-    cout << MSTweight(graph);
+    cout << CalculateMSTweight(graph);
     return 0;
 }
