@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/gulnara/Documents/programming/git_repo/term2/task4/segment_tree/SegmentTree.h
+vector
+-
+
+/home/gulnara/Documents/programming/git_repo/term2/task4/segment_tree/main.cpp
+iostream
+-
+SegmentTree.h
+/home/gulnara/Documents/programming/git_repo/term2/task4/segment_tree/SegmentTree.h
+
