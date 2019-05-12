@@ -49,6 +49,7 @@ public:
 //    ListGraph(const ListGraph& graph);
     void addEdge(int from, int to, float weight);
 
+    void clear();
     vector<Edge> edgesList;
     vector<vector<Edge>> adjacencyList;
     vector<vector<float>> weightMatrix;

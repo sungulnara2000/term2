@@ -25,3 +25,10 @@ void ListGraph::addEdge(int from, int to, float weight) {
     weightMatrix[to][from] = weight;
     edgesList.push_back(edge);
 }
+
+void ListGraph::clear() {
+    edgesList.clear();
+    adjacencyList.clear();
+    weightMatrix.clear();
+    verticesCount = 0;
+}

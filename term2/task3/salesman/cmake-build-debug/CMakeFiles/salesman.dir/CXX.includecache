@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/gulnara/Documents/programming/git_repo/term2/task3/salesman/TSP.h
+graph.h
+/home/gulnara/Documents/programming/git_repo/term2/task3/salesman/graph.h
+
+/home/gulnara/Documents/programming/git_repo/term2/task3/salesman/graph.h
+iostream
+-
+vector
+-
+unordered_set
+-
+limits
+-
+stack
+-
+math.h
+-
+algorithm
+-
+random
+-
+
+/home/gulnara/Documents/programming/git_repo/term2/task3/salesman/test.cpp
+graph.h
+/home/gulnara/Documents/programming/git_repo/term2/task3/salesman/graph.h
+TSP.h
+/home/gulnara/Documents/programming/git_repo/term2/task3/salesman/TSP.h
+

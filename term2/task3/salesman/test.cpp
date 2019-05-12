@@ -22,29 +22,57 @@ void createMap(int n, vector<City>& cities) {
         std::normal_distribution<float> d(0, 1);
         cities[i].x = d(gen);
         cities[i].y = d(gen);
-        cout << "CITY № " << i << ": " << cities[i].x << " " << cities[i].y << endl;
+//        cout << "CITY № " << i << ": " << cities[i].x << " " << cities[i].y << endl;
     }
+}
+
+double expirement(int n) {
+    ListGraph graph(n);
+    vector<City> cities(n);
+    createMap(n, cities);
+    for (int i = 0; i < n; ++i) {
+        for (int j = i + 1; j < n; ++j) {
+            graph.addEdge(i, j, getDistance(cities[i], cities[j]));
+        }
+    }
+    TSP tsp(graph);
+    vector<int> way;
+    tsp.findWay(way);
+    return tsp.wayCost;
 }
 
 void test() {
     for (int n = 2; n < 11; ++n) {
-        ListGraph graph(n);
-        vector<City> cities(n);
-        createMap(n, cities);
-        for (int i = 0; i < n; ++i) {
-            for (int j = i + 1; j < n; ++j) {
-                graph.addEdge(i, j, getDistance(cities[i], cities[j]));
-            }
+        cout << "Current n: " << n << endl;
+        vector<double> values(5);
+        for (int j = 0; j < 5; ++j) {
+            double value = expirement(n);
+            values.push_back(value);
         }
-        TSP tsp(graph);
-        vector<int> way;
-        tsp.findWay(way);
-        for (int i = 0; i < way.size(); ++i){
-            cout << i << ": " << way[i] << endl;
+        for (auto value : values) {
+            cout << value << " ";
         }
-        cout << "algotithm counted way cost: " << tsp.wayCost << endl;
-        float realCost = check(graph);
-        cout << "real way cost:              " << realCost << endl;
-        cout << "approximation is            " << tsp.wayCost/realCost << endl;
+        cout << endl;
+        double sumOfElems = 0;
+        for (auto value : values) {
+            sumOfElems += value;
+        }
+        double middle = sumOfElems / values.size();
+        cout << "Middle of values: " << middle << endl;
+        double standardDeviation;
+        double sumOfSquares = 0;
+        for (auto value : values) {
+            sumOfSquares += pow(value - middle, 2);
+        }
+        standardDeviation = pow(sumOfSquares / values.size(), 0.5);
+        cout << "Standart deviation: " << standardDeviation << endl;
+//        for (int i = 0; i < way.size(); ++i){
+//            cout << i << ": " << way[i] << endl;
+//        }
+//        cout << "algotithm counted way cost: " << tsp.wayCost << endl;
+//        float realCost = check(graph);
+//        cout << "real way cost:              " << realCost << endl;
+//        cout << "approximation is            " << tsp.wayCost/realCost << endl;
+        cout << endl;
     }
 }
