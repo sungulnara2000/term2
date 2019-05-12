@@ -1,3 +1,0 @@
-/home/gulnara/Documents/programming/git_repo/term2/task4/segment_tree/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/gulnara/Documents/programming/git_repo/term2/task4/segment_tree/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/gulnara/Documents/programming/git_repo/term2/task4/segment_tree/cmake-build-debug/CMakeFiles/segment_tree.dir
