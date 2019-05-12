@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/15_puzzle.dir/main.cpp.o CMakeFiles/15_puzzle.dir/State.cpp.o CMakeFiles/15_puzzle.dir/solve.cpp.o  -o 15_puzzle 
