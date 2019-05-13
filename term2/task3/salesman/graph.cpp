@@ -12,9 +12,6 @@ ListGraph::ListGraph(int vertexCount) : verticesCount(vertexCount),
     }
 }
 
-//ListGraph::ListGraph(const ListGraph& graph) : verticesCount(graph.verticesCount), edgesList(graph.edgesList) {}
-
-
 void ListGraph::addEdge(int from, int to, float weight) {
     Edge edge(from, to, weight);
     adjacencyList[from].push_back(edge);

@@ -46,7 +46,6 @@ class ListGraph{
 public:
     ListGraph() {};
     ListGraph(int vertexCount);
-//    ListGraph(const ListGraph& graph);
     void addEdge(int from, int to, float weight);
 
     void clear();

@@ -38,21 +38,20 @@ double expirement(int n) {
     TSP tsp(graph);
     vector<int> way;
     tsp.findWay(way);
-    return tsp.wayCost;
+    double realCost = check(graph);
+    cout << "wayCost / realCost: " << tsp.wayCost << " / " << realCost << " = " << tsp.wayCost/realCost << endl;
+    return tsp.wayCost/realCost;
 }
 
 void test() {
-    for (int n = 2; n < 11; ++n) {
+    for (int n = 2; n < 12; ++n) {
         cout << "Current n: " << n << endl;
-        vector<double> values(5);
+        vector<double> values;
         for (int j = 0; j < 5; ++j) {
             double value = expirement(n);
             values.push_back(value);
         }
-        for (auto value : values) {
-            cout << value << " ";
-        }
-        cout << endl;
+
         double sumOfElems = 0;
         for (auto value : values) {
             sumOfElems += value;

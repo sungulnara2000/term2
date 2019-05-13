@@ -11,12 +11,10 @@ TSP::TSP(ListGraph& graph): inputGraph(graph),
                             map(graph.verticesCount),
                             wayCost(0) {
     initMap();
-//    cout << "created TSP" << endl;
 }
 
 void TSP::initMap() {
     MST(inputGraph, map);
-//    cout << "inited map" << endl;
 }
 
 void TSP::findOdds(vector<int> &bufferForOdds) {
@@ -26,7 +24,6 @@ void TSP::findOdds(vector<int> &bufferForOdds) {
             bufferForOdds.push_back(i);
         }
     }
-//    cout << "found odds" << endl;
 }
 
 void TSP::perfectMatching() {
@@ -46,7 +43,6 @@ void TSP::perfectMatching() {
         odds.erase(odds.begin() + closestId);
         odds.erase(odds.begin());
     }
-//    cout << "perfect matching completed" << endl;
 }
 
 void TSP::EulerTour(int start, vector<int> &path) {
@@ -55,7 +51,6 @@ void TSP::EulerTour(int start, vector<int> &path) {
 
     stack<int> stack;
     int pos = start;
-//    path.push_back(start); // not needed
 
     while(!stack.empty() || !tempList[pos].empty()){
         if(tempList[pos].empty()){
@@ -75,7 +70,6 @@ void TSP::EulerTour(int start, vector<int> &path) {
         }
     }
     path.push_back(pos);
-//    cout << "Euler tour" << endl;
 }
 
 
@@ -100,25 +94,15 @@ float TSP::makeHamiltonian(vector<int>& path) {
         }
     }
     pathCost += inputGraph.weightMatrix[*cur][*iter];
-//    cout << "made it Hamiltonian" << endl;
     return pathCost;
 }
 
-//int TSP::findBestPath(int start, vector<int>& path){
-//    EulerTour(start, path);
-//
-//    int length;
-//    makeHamiltonian(path, length);
-//
-//    return length;
-//}
 
 void TSP::findWay(vector<int>& way) {
     perfectMatching();
     int bestId = 0;
     float minLength = std::numeric_limits<int>::max();
     for (int start = 0; start < map.verticesCount; ++start) {
-//        int length = findBestPath(start, way);
         EulerTour(start, way);
         float length = makeHamiltonian(way);
         minLength = std::min(minLength, length);
