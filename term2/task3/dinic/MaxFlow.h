@@ -17,6 +17,8 @@ private:
     int findBlockFlow(int start, int end, int flow, vector<int>& used);
     vector<int> level;
     bool BFS(int source, int dest);
+
+    vector<vector<Edge>> adjacencyList;
 };
 
 

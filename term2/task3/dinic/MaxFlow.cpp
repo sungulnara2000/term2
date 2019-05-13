@@ -4,9 +4,14 @@
 
 #include "MaxFlow.h"
 
-MaxFlow::MaxFlow(Graph &graph): _input(graph), _network(graph), level(_input.verticesCount(), -1)  {
+MaxFlow::MaxFlow(Graph &graph): _input(graph), _network(graph), level(_input.verticesCount(), -1), adjacencyList(graph.verticesCount())  {
     for (int i = 0; i < graph.verticesCount(); ++i) {
         _network.clear();
+    }
+        for (int vertex = 0; vertex < _input.verticesCount(); ++vertex) {
+        vector<Edge> nextEdges;
+        _input.getEdges(vertex, nextEdges);
+        adjacencyList[vertex] = nextEdges;
     }
 }
 
@@ -38,22 +43,19 @@ int MaxFlow::findBlockFlow(int start, int end, int flow, vector<int>& used) {
     if (start == end) {
         return flow;
     }
-    vector<Edge> nextEdgesFlow;
+
     vector<Edge> nextEdgesCapacity;
     _input.getEdges(start, nextEdgesCapacity);
-    _network.getEdges(start, nextEdgesFlow);
     for ( ; used[start] < nextEdgesCapacity.size(); ++used[start]) {
         auto& edge = nextEdgesCapacity[used[start]];
-        auto& flowEdge = nextEdgesFlow[used[start]];
+        auto& flowEdge = adjacencyList[start][used[start]];
         if (level[edge.to] == level[start] + 1 && edge.capacity > flowEdge.capacity) {
             int possibleFlow = std::min(flow, edge.capacity - flowEdge.capacity);
 
             int pushedFlow = findBlockFlow(edge.to, end, possibleFlow, used);
             if (pushedFlow > 0) {
                 flowEdge.capacity += pushedFlow;
-                vector<Edge> nextEdges;
-                _network.getEdges(edge.to, nextEdges);
-                nextEdges[edge.backID].capacity -= pushedFlow;
+                adjacencyList[edge.to][edge.backID].capacity -= pushedFlow;
 
                 return pushedFlow;
             }
