@@ -13,7 +13,7 @@ int main() {
     for (int i = 0; i < m; ++i) {
         int from, to, capacity;
         cin >> from >> to >> capacity;
-        graph.addEdge(from, to, capacity);
+        graph.addEdge(from - 1, to - 1, capacity);
     }
     MaxFlow maxFlow(graph);
     cout << maxFlow.getMaxFlow(0, n-1);
