@@ -35,39 +35,41 @@ void unionSets(vector<component>& sets, int a, int b) {
 
 void MST(ListGraph& inputGraph, ListGraph& mst) {
     float MSTweight = 0;
-    int numSets = inputGraph.verticesCount;
-    vector<component> sets(inputGraph.verticesCount);
+    int numSets = inputGraph.getVerticesCount();
+    vector<component> sets(inputGraph.getVerticesCount());
 
-    for (int i = 0; i < inputGraph.verticesCount; ++i) {
+    for (int i = 0; i < inputGraph.getVerticesCount(); ++i) {
         sets[i].parent = i;
         sets[i].rank = 0;
     }
-    vector<Edge> safeEdges(inputGraph.verticesCount, Edge(0, 0, std::numeric_limits<int>::max()));
+    vector<Edge> safeEdges(inputGraph.getVerticesCount(), Edge(0, 0, std::numeric_limits<int>::max()));
 
     while(numSets > 1) {
-        for (int i = 0; i < inputGraph.verticesCount; ++i) {
+        for (int i = 0; i < inputGraph.getVerticesCount(); ++i) {
             safeEdges[i].weight = std::numeric_limits<int>::max();
         }
-        for (auto i : inputGraph.edgesList) {
-            int leader1 = findSet(sets, i.from);
-            int leader2 = findSet(sets, i.to);
+        vector<Edge> edgesList;
+        inputGraph.getAllEdges(edgesList);
+        for (auto edge : edgesList) {
+            int leader1 = findSet(sets, edge.from);
+            int leader2 = findSet(sets, edge.to);
             if (leader1 != leader2) {
-                if(i.weight < safeEdges[leader1].weight) {
-                    safeEdges[leader1] = i;
+                if(edge.weight < safeEdges[leader1].weight) {
+                    safeEdges[leader1] = edge;
                 }
-                if(i.weight < safeEdges[leader2].weight) {
-                    safeEdges[leader2] = i;
+                if(edge.weight < safeEdges[leader2].weight) {
+                    safeEdges[leader2] = edge;
                 }
             }
         }
-        for (int i = 0; i < inputGraph.verticesCount; ++i) {
-            if (safeEdges[i].weight != std::numeric_limits<int>::max()) {
-                int leader1 = findSet(sets, safeEdges[i].from);
-                int leader2 = findSet(sets, safeEdges[i].to);
+        for (int vertex = 0; vertex < inputGraph.getVerticesCount(); ++vertex) {
+            if (safeEdges[vertex].weight != std::numeric_limits<int>::max()) {
+                int leader1 = findSet(sets, safeEdges[vertex].from);
+                int leader2 = findSet(sets, safeEdges[vertex].to);
 
                 if (leader1 != leader2) {
-                    MSTweight += safeEdges[i].weight;
-                    mst.addEdge(safeEdges[i].from, safeEdges[i].to, safeEdges[i].weight);
+                    MSTweight += safeEdges[vertex].weight;
+                    mst.addEdge(safeEdges[vertex].from, safeEdges[vertex].to, safeEdges[vertex].weight);
                     unionSets(sets, leader1, leader2);
                     --numSets;
                 }

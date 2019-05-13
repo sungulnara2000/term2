@@ -21,8 +21,8 @@ private:
     void initMap();
     void findOdds(vector<int>& bufferForOdds);
     void perfectMatching();
-    void EulerTour(int start, vector<int>& path);
-    float makeHamiltonian(vector<int>& path); // make path hamiltonian and return length of the path
+    void findEulerTour(int start, vector<int>& path);
+    float makeTourHamiltonian(vector<int>& path); // make path hamiltonian and return length of the path
 };
 
 

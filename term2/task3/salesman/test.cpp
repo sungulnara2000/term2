@@ -6,7 +6,7 @@
 #include "TSP.h"
 
 
-float getDistance(City c1, City c2){
+float getDistance(const City& c1, const City& c2){
     float dx = pow((c1.x - c2.x),2);
     float dy = pow((c1.y - c2.y),2);
     return sqrt(dx + dy);
@@ -22,7 +22,6 @@ void createMap(int n, vector<City>& cities) {
         std::normal_distribution<float> d(0, 1);
         cities[i].x = d(gen);
         cities[i].y = d(gen);
-//        cout << "CITY № " << i << ": " << cities[i].x << " " << cities[i].y << endl;
     }
 }
 
@@ -44,7 +43,7 @@ double expirement(int n) {
 }
 
 void test() {
-    for (int n = 2; n < 12; ++n) {
+    for (int n = 2; n < 11; ++n) {
         cout << "Current n: " << n << endl;
         vector<double> values;
         for (int j = 0; j < 5; ++j) {
@@ -65,13 +64,6 @@ void test() {
         }
         standardDeviation = pow(sumOfSquares / values.size(), 0.5);
         cout << "Standart deviation: " << standardDeviation << endl;
-//        for (int i = 0; i < way.size(); ++i){
-//            cout << i << ": " << way[i] << endl;
-//        }
-//        cout << "algotithm counted way cost: " << tsp.wayCost << endl;
-//        float realCost = check(graph);
-//        cout << "real way cost:              " << realCost << endl;
-//        cout << "approximation is            " << tsp.wayCost/realCost << endl;
         cout << endl;
     }
 }

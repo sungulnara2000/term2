@@ -47,10 +47,12 @@ public:
     ListGraph() {};
     ListGraph(int vertexCount);
     void addEdge(int from, int to, float weight);
-
+    int getVerticesCount();
     void clear();
-    vector<Edge> edgesList;
-    vector<vector<Edge>> adjacencyList;
+    void getAllEdges(vector<Edge>& edges);
+    void getNextEdges(int vertex, vector<Edge>& edges);
+    void getNextVertices(int vertex, vector<float>& vertices);
+private:
     vector<vector<float>> weightMatrix;
     int verticesCount;
 };
