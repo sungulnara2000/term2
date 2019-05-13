@@ -3,4 +3,4 @@ project(dinic)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(dinic main.cpp)
+add_executable(dinic main.cpp graph.h graph.cpp MaxFlow.h MaxFlow.cpp)

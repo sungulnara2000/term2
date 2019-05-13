@@ -11,7 +11,9 @@
 #include <unordered_set>
 #include <climits>
 #include <queue>
+#include <unordered_map>
 
+using std::unordered_map;
 using std::queue;
 using std::vector;
 using std::make_pair;
@@ -22,30 +24,27 @@ using std::cout;
 
 struct Edge {
     Edge() {}
-    Edge(int from, int to, int capacity, int flow, int backID): from(from),
-                                                                to(to),
-                                                                capacity(capacity),
-                                                                flow(flow),
-                                                                backID(backID){}
+    Edge(int from, int to, int capacity, int backID): from(from),
+                                          to(to),
+                                          capacity(capacity),
+                                          backID(backID){}
     int from;
     int to;
     int capacity;
-    int flow;
-    int backID; // id of back edge
+    int backID;
 };
 
 class Graph{
 public:
+    Graph(){};
     Graph(int vertexCount);
     void addEdge(int from, int to, int capacity);
     int verticesCount() const;
     void getAdjacentVertices(int vertex, vector<int>& vertices) const;
-    int getMaxFlow(int source, int dest);
+    void clear();
+    void getEdges(int vertex, vector<Edge>& buffer); // НАХОДИТ РЕБРА, ИНЦИДЕНТНЫЕ ВЕРШИНЕ
 
 private:
-    int findBlockFlow(int start, int end, int flow, vector<int>& used);
-    vector<int> level;
-    bool BFS(int source, int dest);
     vector<vector<Edge>> adjacencyList;
 };
 
