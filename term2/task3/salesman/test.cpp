@@ -12,7 +12,7 @@ float getDistance(const City& c1, const City& c2){
     return sqrt(dx + dy);
 }
 
-float check(ListGraph graph);
+float check(MatrixGraph graph);
 
 void createMap(int n, vector<City>& cities) {
     std::random_device rd;
@@ -26,7 +26,7 @@ void createMap(int n, vector<City>& cities) {
 }
 
 double expirement(int n) {
-    ListGraph graph(n);
+    MatrixGraph graph(n);
     vector<City> cities(n);
     createMap(n, cities);
     for (int i = 0; i < n; ++i) {

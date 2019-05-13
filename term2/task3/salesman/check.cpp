@@ -3,7 +3,7 @@
 //
 #include "graph.h"
 
-float check(ListGraph graph) {
+float check(MatrixGraph graph) {
     vector<int> cities(graph.getVerticesCount());
     for (int i = 0; i < cities.size(); ++i) {
         cities[i] = i;

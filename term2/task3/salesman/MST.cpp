@@ -33,7 +33,7 @@ void unionSets(vector<component>& sets, int a, int b) {
     }
 }
 
-void MST(ListGraph& inputGraph, ListGraph& mst) {
+void MST(MatrixGraph& inputGraph, MatrixGraph& mst) {
     float MSTweight = 0;
     int numSets = inputGraph.getVerticesCount();
     vector<component> sets(inputGraph.getVerticesCount());

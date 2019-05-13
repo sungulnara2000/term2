@@ -42,10 +42,10 @@ struct City{
 
 // non-oriented graph with weights
 
-class ListGraph{
+class MatrixGraph{
 public:
-    ListGraph() {};
-    ListGraph(int vertexCount);
+    MatrixGraph() {};
+    MatrixGraph(int vertexCount);
     void addEdge(int from, int to, float weight);
     int getVerticesCount();
     void clear();

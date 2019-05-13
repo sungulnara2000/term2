@@ -4,14 +4,14 @@
 
 #include "graph.h"
 
-ListGraph::ListGraph(int vertexCount) : verticesCount(vertexCount),
+MatrixGraph::MatrixGraph(int vertexCount) : verticesCount(vertexCount),
                                         weightMatrix(vertexCount, vector<float>(vertexCount, std::numeric_limits<int>::max())) {
     for (int i = 0; i < weightMatrix.size(); ++i) {
         weightMatrix[i][i] = 0;
     }
 }
 
-void ListGraph::addEdge(int from, int to, float weight) {
+void MatrixGraph::addEdge(int from, int to, float weight) {
     Edge edge(from, to, weight);
     Edge backEdge(to, from, weight);
 
@@ -19,16 +19,16 @@ void ListGraph::addEdge(int from, int to, float weight) {
     weightMatrix[to][from] = weight;
 }
 
-void ListGraph::clear() {
+void MatrixGraph::clear() {
     weightMatrix.clear();
     verticesCount = 0;
 }
 
-int ListGraph::getVerticesCount() {
+int MatrixGraph::getVerticesCount() {
     return verticesCount;
 }
 
-void ListGraph::getAllEdges(vector<Edge> &edges) {
+void MatrixGraph::getAllEdges(vector<Edge> &edges) {
     edges.clear();
     for (int j = 0; j < verticesCount; ++j) {
         for (int i = j + 1; i < verticesCount; ++i) {
@@ -39,7 +39,7 @@ void ListGraph::getAllEdges(vector<Edge> &edges) {
     }
 }
 
-void ListGraph::getNextEdges(int vertex, vector<Edge> &edges) {
+void MatrixGraph::getNextEdges(int vertex, vector<Edge> &edges) {
     for (int i = 0; i < weightMatrix[vertex].size(); ++i) {
         if (weightMatrix[vertex][i] != 0 && weightMatrix[vertex][i] != std::numeric_limits<int>::max()) {
             edges.push_back(Edge(vertex, i, weightMatrix[vertex][i]));
@@ -47,7 +47,7 @@ void ListGraph::getNextEdges(int vertex, vector<Edge> &edges) {
     }
 }
 
-void ListGraph::getNextVertices(int vertex, vector<float> &vertices) {
+void MatrixGraph::getNextVertices(int vertex, vector<float> &vertices) {
     vertices.clear();
     vertices = weightMatrix[vertex];
 }

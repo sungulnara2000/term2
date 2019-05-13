@@ -4,10 +4,10 @@
 
 #include "TSP.h"
 
-void MST(ListGraph& inputGraph, ListGraph& mst);
+void MST(MatrixGraph& inputGraph, MatrixGraph& mst);
 
 
-TSP::TSP(ListGraph& graph): inputGraph(graph),
+TSP::TSP(MatrixGraph& graph): inputGraph(graph),
                             map(graph.getVerticesCount()),
                             wayCost(0) {
     initMap();

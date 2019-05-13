@@ -9,14 +9,14 @@
 
 class TSP {
 public:
-    TSP(ListGraph& graph);
+    TSP(MatrixGraph& graph);
     void findWay(vector<int>& bufferForPath);
 
     float wayCost;
 
 private:
-    ListGraph inputGraph;
-    ListGraph map;
+    MatrixGraph inputGraph;
+    MatrixGraph map;
 
     void initMap();
     void findOdds(vector<int>& bufferForOdds);
