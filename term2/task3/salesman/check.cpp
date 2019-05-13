@@ -3,6 +3,10 @@
 //
 #include "graph.h"
 
+#include <algorithm>
+
+using std::numeric_limits;
+
 float check(MatrixGraph graph) {
     vector<int> cities(graph.getVerticesCount());
     for (int i = 0; i < cities.size(); ++i) {

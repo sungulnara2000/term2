@@ -3,6 +3,9 @@
 //
 
 #include "TSP.h"
+#include <stack>
+
+using std::stack;
 
 void MST(MatrixGraph& inputGraph, MatrixGraph& mst);
 

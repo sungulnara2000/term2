@@ -5,25 +5,11 @@
 #ifndef SALESMAN_GRAPH_H
 #define SALESMAN_GRAPH_H
 
-
-#include <iostream>
 #include <vector>
-#include <unordered_set>
 #include <limits>
-#include <stack>
 #include <math.h>
-#include <algorithm>
-#include <random>
 
-using std::stack;
-using std::endl;
 using std::vector;
-using std::make_pair;
-using std::pair;
-using std::unordered_set;
-using std::cin;
-using std::cout;
-using std::numeric_limits;
 using std::min;
 
 struct Edge {

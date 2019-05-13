@@ -4,7 +4,12 @@
 
 #include "graph.h"
 #include "TSP.h"
+#include <iostream>
+#include <random>
 
+using std::cin;
+using std::cout;
+using std::endl;
 
 float getDistance(const City& c1, const City& c2){
     float dx = pow((c1.x - c2.x),2);

@@ -4,6 +4,8 @@
 
 #include "graph.h"
 
+using std::numeric_limits;
+
 MatrixGraph::MatrixGraph(int vertexCount) : verticesCount(vertexCount),
                                         weightMatrix(vertexCount, vector<float>(vertexCount, std::numeric_limits<int>::max())) {
     for (int i = 0; i < weightMatrix.size(); ++i) {
