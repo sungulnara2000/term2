@@ -23,10 +23,7 @@ public:
     State() {};
     State(vector<int>& combination);
 
-    State up() const;
-    State down() const;
-    State left() const;
-    State right() const;
+    State move(char letter) const;
 
     // храним расстановку одним 64 битным числом, на каждую ячейку приходится 4 бита,
     ull row = 0;

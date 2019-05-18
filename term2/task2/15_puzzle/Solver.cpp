@@ -45,19 +45,21 @@ bool Solver::solve(State& state, vector<char>& steps) {
 
         if (visited.find(curState.row) == visited.end()) {
             if (curState.spacePos >= 4) {
-                q.push(curState.up());
+                q.push(curState.move('U'));
             }
             if (curState.spacePos <= 11) {
-                q.push(curState.down());
+                q.push(curState.move('D'));
             }
             if (curState.spacePos % 4 != 0) {
-                q.push(curState.left());
+                q.push(curState.move('L'));
             }
             if (curState.spacePos % 4 != 3) {
-                q.push(curState.right());
+                q.push(curState.move('R'));
             }
             visited.insert(curState.row);
         }
+
+
     }
     return true;
 }

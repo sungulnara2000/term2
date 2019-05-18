@@ -34,62 +34,34 @@ State::State(vector<int> &combination) {
     }
 }
 
-State State::up() const {
+State State::move(char letter) const {
     State moved;
     moved.spacePos = this->spacePos;
     moved.row = this->row;
     moved.path = this->path;
 
-    ull value = get_value(spacePos - 4);
-    moved.set_value(spacePos - 4, 0);
+    int bias = 0;
+    switch(letter)
+    {
+        case 'U':
+            bias = -4;
+            break;
+        case 'D':
+            bias = 4;
+            break;
+        case 'L':
+            bias = -1;
+            break;
+        case 'R':
+            bias = 1;
+            break;
+    }
+
+    ull value = get_value(spacePos + bias);
+    moved.set_value(spacePos + bias, 0);
     moved.set_value(spacePos, value);
-    moved.spacePos -= 4;
-    moved.path.push_back('D');
-
-    return moved;
-}
-
-State State::down() const {
-    State moved;
-    moved.spacePos = this->spacePos;
-    moved.row = this->row;
-    moved.path = this->path;
-
-    ull value = get_value(spacePos + 4);
-    moved.set_value(spacePos + 4, 0);
-    moved.set_value(spacePos, value);
-    moved.spacePos += 4;
-    moved.path.push_back('U');
-
-    return moved;
-}
-
-State State::left() const {
-    State moved;
-    moved.spacePos = this->spacePos;
-    moved.row = this->row;
-    moved.path = this->path;
-
-    ull value = get_value(spacePos - 1);
-    moved.set_value(spacePos - 1, 0);
-    moved.set_value(spacePos, value);
-    --moved.spacePos;
-    moved.path.push_back('R');
-
-    return moved;
-}
-
-State State::right() const {
-    State moved;
-    moved.spacePos = this->spacePos;
-    moved.row = this->row;
-    moved.path = this->path;
-
-    ull value = get_value(spacePos + 1);
-    moved.set_value(spacePos + 1, 0);
-    moved.set_value(spacePos, value);
-    ++moved.spacePos;
-    moved.path.push_back('L');
+    moved.spacePos += bias;
+    moved.path.push_back(letter);
 
     return moved;
 }
