@@ -2,11 +2,13 @@
 #include "State.h"
 #include "Solver.h"
 
+void declare_masks();
 
 using std::cin;
 using std::cout;
 
 int main() {
+    declare_masks();
     vector<int> combination(16, 0);
     for (int i = 0; i < 16; ++i) {
         std::cin >> combination[i];

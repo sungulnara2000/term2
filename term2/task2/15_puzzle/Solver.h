@@ -18,11 +18,12 @@ struct cmp {
 class Solver {
 public:
     bool solve(State& state, vector<char>& rv);
-
 private:
     std::set<State, cmp> q;
     std::unordered_set<ull> visited;
     const ull GOAL = 1311768467463790320;
+    void declare_mask();
+
 };
 
 #endif //INC_15_PUZZLE_SOLVER_H
