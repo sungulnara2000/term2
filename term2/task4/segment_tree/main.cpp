@@ -22,7 +22,7 @@ int main() {
     for (int i = 0; i < queriesNumber; ++i) {
         int left, right;
         cin >> left >> right;
-        int rv = segmentTree.getMaxRow(0, 0, collection.size() - 1, left, right).max;
+        int rv = segmentTree.getMaxRow(collection.size() - 1, left, right);
         cout << (rv < 0 ? 0 : rv) << endl;
     }
     return 0;

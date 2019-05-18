@@ -8,7 +8,7 @@
 #include <vector>
 using std::vector;
 
-struct node {
+struct Node {
     int sum;
     int suffix;
     int prefix;
@@ -18,10 +18,11 @@ struct node {
 class SegmentTree {
 public:
     SegmentTree(vector<int>& input);
-    node getMaxRow(int v, int leftPos, int rightPos, int left, int right);
+    int getMaxRow(int v, int left, int right);
 private:
-    node merge(node left, node right);
-    vector<node> tree;
+    Node getMaxNode(int v, int leftPos, int rightPos, int left, int right);
+    Node merge(Node left, Node right);
+    vector<Node> tree;
     void build(vector<int>& values, int vertex, int left, int right);
 };
 
