@@ -15,7 +15,7 @@ int heuristic(const State& state) {
     return heuristic;
 }
 
-bool solvable(State& state) {
+bool is_solvable(const State& state) {
     int inversions = 0;
     for (int i = 0; i < 16; ++i) {
         for (int j = i + 1; j < 16; ++j) {
@@ -27,8 +27,8 @@ bool solvable(State& state) {
     return ((inversions + state.spacePos / 4 + 1) % 2 == 0);
 }
 
-bool Solver::solve(State& state, vector<char>& rv) {
-    if (!solvable(state)) {
+bool Solver::solve(State& state, vector<char>& steps) {
+    if (!is_solvable(state)) {
         return false;
     }
     visited.clear();
@@ -39,7 +39,7 @@ bool Solver::solve(State& state, vector<char>& rv) {
         q.pop();
 
         if (curState.row == GOAL) {
-            rv = curState.path;
+            steps = curState.path;
             break;
         }
 

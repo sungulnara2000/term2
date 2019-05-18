@@ -22,7 +22,7 @@ public:
 private:
     std::priority_queue<State, std::vector<State>, cmp> q;
     std::unordered_set<ull> visited;
-    ull GOAL = 1311768467463790320;
+    const ull GOAL = 1311768467463790320;
 };
 
 #endif //INC_15_PUZZLE_SOLVER_H
