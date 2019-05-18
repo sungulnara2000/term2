@@ -32,6 +32,7 @@ bool Solver::solve(State& state, vector<char>& steps) {
         return false;
     }
     visited.clear();
+    q.clear();
     q.insert(state);
 
     while (!q.empty()) {
