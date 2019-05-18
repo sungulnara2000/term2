@@ -32,11 +32,11 @@ bool Solver::solve(State& state, vector<char>& steps) {
         return false;
     }
     visited.clear();
-    q.push(state);
+    q.insert(state);
 
     while (!q.empty()) {
-        State curState = q.top();
-        q.pop();
+        State curState = *q.begin();
+        q.erase(q.begin());
 
         if (curState.row == GOAL) {
             steps = curState.path;
@@ -45,16 +45,16 @@ bool Solver::solve(State& state, vector<char>& steps) {
 
         if (visited.find(curState.row) == visited.end()) {
             if (curState.spacePos >= 4) {
-                q.push(curState.move('U'));
+                q.insert(curState.move('U'));
             }
             if (curState.spacePos <= 11) {
-                q.push(curState.move('D'));
+                q.insert(curState.move('D'));
             }
             if (curState.spacePos % 4 != 0) {
-                q.push(curState.move('L'));
+                q.insert(curState.move('L'));
             }
             if (curState.spacePos % 4 != 3) {
-                q.push(curState.move('R'));
+                q.insert(curState.move('R'));
             }
             visited.insert(curState.row);
         }

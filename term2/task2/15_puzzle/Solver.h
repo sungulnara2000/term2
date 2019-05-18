@@ -20,7 +20,7 @@ public:
     bool solve(State& state, vector<char>& rv);
 
 private:
-    std::priority_queue<State, std::vector<State>, cmp> q;
+    std::set<State, cmp> q;
     std::unordered_set<ull> visited;
     const ull GOAL = 1311768467463790320;
 };
